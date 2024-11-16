@@ -1,0 +1,230 @@
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(208, 205, 205);
+}
+
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 8px 10px;
+}
+
+.custom-icon {
+    color: rgb(72, 163, 224) ;
+  }
+.btn{
+    background: rgb(72, 163, 224);
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    border-radius: 25px;
+    padding: 10px;
+    border-color:rgb(72, 163, 224) ;
+
+  }
+.header a {
+  float: left;
+  color: rgb(61, 61, 171);
+  text-align: center;
+  padding: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 15px; 
+  line-height: 25px;
+  border-radius: 4px;
+  padding-right: 15px; 
+  
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+  padding-left:255px;
+  color:rgb(61, 61, 171)
+}
+
+.header-right a:hover {
+text-decoration: underline;
+color:rgb(72, 163, 224);
+}
+
+
+.header-right {
+  float: right;
+  padding-right: 200px; 
+
+}
+
+.header-left {
+  float: left;
+  padding-left: 200px; 
+}
+.body{
+    background-color: #f1f1f1;
+    display: flex;
+     margin-left: 200px;
+     margin-right: 200px;
+     margin-top: 130px ;
+}
+
+.col{
+    margin-left: 60px; 
+    margin-bottom: 30px;
+}
+h1{
+    font-size: 15px;
+    margin-left: 30px;
+    margin-top: 30px;
+    font-weight: bold;
+}
+.card-text{
+    color: #FFFFFF;
+    font-size: small;
+  
+}
+
+.container{
+    margin-top: 0px; 
+    margin-left: 2px;
+    display: flex;
+    
+}
+.card1{
+    padding-left: 25px;
+
+}
+@media screen and (max-width: 496px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+  
+  .header-right {
+    float: none;
+   
+  }
+}
+
+.ma-ligne {
+  border-top: 2px solid #ccc;
+  margin: 20px 10px;
+  
+}
+#uni{
+  position: absolute;
+    margin-top:120px;
+     background-color: black;
+     color: #FFFFFF !important; 
+     width: 100%;
+     left: 0px;
+     text-align: center;
+     border-radius: 3px;
+     
+     
+}
+.btn1{
+    background-color: chartreuse;
+    border: chartreuse;
+    color: rgba(255, 255, 255, 0.726);
+}
+.card-text{
+  color: black;
+  
+}
+.btn2{
+  background-color: #ededed;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.btn3{
+ border-color: rgb(134, 241, 26);
+  color: rgb(134, 212, 57);
+  font-size: 12px;
+  font-weight: bold;
+
+}
+.btn4{
+ border-color: rgb(247, 96, 96);
+  color: rgb(247, 96, 96);
+  font-size: 12px;
+  font-weight: bold;
+
+}
+.btn5{
+  font-size: 12px;
+  font-weight: bold;
+}
+.text{
+
+position: absolute;
+font-weight: bold;
+font-size: 11px;
+
+.new{
+  color: rgb(110, 161, 33);
+  font-size: 10px;
+  font-weight: bold;
+  
+  
+ 
+}
+.date{
+  font-weight: normal;
+  font-size: 10px;
+}
+}
+.card{
+  background-color: #ada9a93b;
+
+  
+}
+
+#ten{
+   height: 450px;
+}
+
+.fil-actualité{
+  background-color: black;
+  color: #FFFFFF;
+  padding-left: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-weight: bold;
+}
+
+#fil-actualité{
+  font-size: 12px;
+
+}
+.tan{
+  margin: 0%;
+
+ 
+}
+
+
+.card-title{
+  font-weight: bold;
+}
+
+.act{
+  margin-bottom: 2px;
+}
+.act1{
+  margin-bottom: 2px;
+  font-size: 12px;
+}
+
+.titre{
+ color : black;
+ font-size: 30px;
+ font-weight: bold;
+}
+

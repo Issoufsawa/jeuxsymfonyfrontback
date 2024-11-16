@@ -1,0 +1,43 @@
+.banniere {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    /* margin-bottom: 500px; */
+  }
+  
+  .banniere img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    
+    /* margin-bottom: 500px; */
+  }
+  
+  .banniere .overlay1 {
+    position: relative;
+    width: 1120px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  
+  
+  
+  .p1 {
+    display: flex;
+    text-align: start;
+    justify-content: initial;
+    margin-left: 500px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+   
+  }
+  
+
+  .content{
+    margin-left: 40px;
+  }

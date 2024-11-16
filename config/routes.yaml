@@ -1,0 +1,23 @@
+controllers:
+    resource: ../src/Controller/
+    type: attribute
+
+app_detaille:
+    path: /detaille/{id}
+    controller: App\Controller\DetailleController::detaille
+
+   
+   
+   
+app_detaille1:
+    path: /detailleactualite/{id}
+    controller: App\Controller\DetailleactualiteController::detailleactualite
+
+
+app_detaille2:
+    path: /detailletest/{id}
+    controller: App\Controller\DetailletestController::detailletest
+
+app_detaille3:
+    path: /detaillebonplan/{id}
+    controller: App\Controller\DetaillebonplanController::detaillebonplan

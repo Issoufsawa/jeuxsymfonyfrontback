@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}
+        <!-- Custom fonts for this template-->
+        <link href="{{ asset('assets/admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+        <!-- Custom styles for this template-->
+        <link href="{{ asset('assets/admin/css/sb-admin-2.min.css') }}" rel="stylesheet">
+    {% endblock %}
+</head>
+<body id="page-top">
+{{ include('admin/includes/header.html.twig') }}
+{% block body %}
+    <div class="container mt-5">
+    <h2 class="text-center">Videos List</h2>
+    <table class="table table-striped table-bordered text-center">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Titre</th>
+                <th scope="col">Description</th>
+                <th scope="col">Video</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for video in allvideo %}
+                <tr>
+                    <th scope="row">{{ loop.index }}</th> <!-- Ajoute un compteur automatique -->
+                    <td>{{ video.titre }}</td>
+                    <td>{{ video.description }}</td>
+                    <td>
+                        {% if video.videoPath %}
+                            <!-- Assurez-vous que la vidéo est dans le bon dossier (ex. "uploads/videos/") -->
+                            <video width="320" height="240" controls>
+                                <source src="{{ asset('uploads/videos/' ~ video.videoPath) }}" type="video/mp4">
+                                Votre navigateur ne prend pas en charge la balise vidéo.
+                            </video>
+                        {% else %}
+                            <p>Aucune vidéo disponible.</p>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
+{{ include('admin/includes/footer.html.twig') }}
+{% block javascripts %}
+    <!-- Bootstrap core JavaScript-->
+    <script src="{{ asset('assets/admin/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{{ asset('assets/admin/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{{ asset('assets/admin/js/sb-admin-2.min.js') }}"></script>
+{% endblock %}
+</body>
+</html>
