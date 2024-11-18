@@ -74,7 +74,7 @@
   <div class="row row-cols-1 row-cols-md-4 g-4">
 
     {% for bonplan in allbonplan %}
-        <div class="col">
+        <div class="col" id="col1">
            <a href="{{ path('app_detaillebonplan', { 'id': bonplan.id }) }}">  
             <div class="card" style="width: 300px ">
                 <img src="{{ asset('uploads/images/' ~ bonplan.imagePath) }}"class="card-img-top" alt="{{ bonplan.titre }}" style="width:100%">

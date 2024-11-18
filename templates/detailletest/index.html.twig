@@ -92,7 +92,7 @@
      <h1> Last NEW </h1> 
     <div class="row row-cols-1 row-cols-md-4 g-4">
     {% for jeu in jeux %}
-        <div class="col">
+        <div class="col" id="col1">
              <a href="{{ path('app_detailleactualite', { 'id': jeu.id }) }}">  
             <div class="card" style="width: 300px">
                 <img   src="{{ asset('uploads/images/' ~ jeu.imagePath) }}"class="card-img-top" alt="{{ jeu.titre }}" style="width:100%">

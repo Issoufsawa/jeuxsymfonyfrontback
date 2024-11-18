@@ -12,7 +12,7 @@
 <body>
 <header class="section fixed-top bg-light">
     <div class="container-fluid">
-        <div class="row align-items-center py-2">
+        <div class="row align-items-center py-3">
         <nav class="navbar navbar-expand-md navbar-light p-0">
                    
                     <div class="collapse navbar-collapse" id="navbarMenu1">
@@ -58,7 +58,7 @@
                             <li class="nav-item"><a class="nav-link" href="{{ path('app_affichervideo') }}">Multimédia</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ path('app_afficherbonplan') }}">Bons plans</a></li>
                             <li class="nav-item">
-                                <button type="button" class="btn btn-primary">Make an Appointment</button>
+                                <a href="{{ path('app_appointement') }}" class="btn btn-primary">Make an Appointment</a>
                             </li>
                         </ul>
                     </div>
@@ -89,7 +89,7 @@
      <h1> Last NEW </h1> 
     <div class="row row-cols-1 row-cols-md-4 g-4">
     {% for jeu in jeux %}
-        <div class="col">
+        <div class="col" id="col1">
           <a href="{{ path('app_detailleactualite', { 'id': jeu.id }) }}">  
             <div class="card" style="width: 300px">
                 <img   src="{{ asset('uploads/images/' ~ jeu.imagePath) }}"class="card-img-top" alt="{{ jeu.titre }}" style="width:100%">

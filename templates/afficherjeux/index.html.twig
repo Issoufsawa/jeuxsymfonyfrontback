@@ -74,7 +74,7 @@
 
     {% for jeu in jeux %}
    
-        <div class="col">
+        <div class="col" id="col1">
            <a href="{{ path('app_detaille', { 'id': jeu.id }) }}"> 
             <div class="card" style="width: 300px">
                 <img src="{{ asset('uploads/images/' ~ jeu.imagePath) }}"class="card-img-top" alt="{{ jeu.titre }}" style="width:100%">
