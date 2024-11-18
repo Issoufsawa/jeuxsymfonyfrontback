@@ -26,6 +26,8 @@
                 <th scope="col">Titre</th>
                 <th scope="col">Description</th>
                 <th scope="col">Video</th>
+                <th scope="col">Modifier</th>
+                <th scope="col">Supprimer</th>
             </tr>
         </thead>
         <tbody>
@@ -45,6 +47,11 @@
                             <p>Aucune vidéo disponible.</p>
                         {% endif %}
                     </td>
+                     <td><a href="#" class="btn btn-success">Modifier</a></td>
+                   <td>  <form method="post" action="{{ path('video_delete', { 'id': video.id }) }}" onsubmit="return confirm('Voulez-vous vraiment supprimer cette video ?');">
+        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ video.id) }}">
+        <button type="submit" class="btn btn-danger">Supprimer</button>
+    </form></td>
                 </tr>
             {% endfor %}
         </tbody>

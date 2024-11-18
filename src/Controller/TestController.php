@@ -50,4 +50,76 @@ class TestController extends AbstractController
         ]);
     }
 }
+#[Route('/test/{id}/edit', name: 'test_edit', methods: ['GET', 'POST'])]
+    public function edit(Request $request, $id, EntityManagerInterface $entityManager): Response
+    {
+        // Récupérer l'entité Actuc par son ID
+        $actuc = $entityManager->getRepository(Test::class)->find($id);
+    
+        if (!$actuc) {
+            throw $this->createNotFoundException('Le test avec l\'ID ' . $id . ' n\'existe pas.');
+        }
+    
+        $form = $this->createForm(TestType::class, $actuc);
+        $form->handleRequest($request);
+    
+        // Traitement du formulaire
+        if ($form->isSubmitted() && $form->isValid()) {
+            // Gestion des fichiers, sauvegarde, redirection...
+        }
+            // Création du formulaire pour l'édition de l'entité
+    $form = $this->createForm(TestType::class, $actuc);
+    $form->handleRequest($request);
+
+    // Traitement du formulaire une fois soumis
+    if ($form->isSubmitted() && $form->isValid()) {
+        // Vérification de l'upload de l'image
+        $imageFile = $form->get('image')->getData();
+        if ($imageFile) {
+            $newFilename = uniqid() . '.' . $imageFile->guessExtension();
+// Déplacement de l'image dans le répertoire configuré
+            $imageFile->move(
+                $this->getParameter('images_directory'), // Assurez-vous que ce paramètre est défini dans `services.yaml`
+                $newFilename
+            );
+
+            // Mise à jour du chemin de l'image dans l'entité
+            $actuc->setImagePath($newFilename);
+        }
+        // Sauvegarde des modifications dans la base de données
+        $entityManager->flush();
+
+        // Ajout d'un message flash pour indiquer que la modification a été réussie
+        $this->addFlash('success', 'bonplan modifié avec succès!'); 
+// Redirection vers la liste des jeux    
+return $this->redirectToRoute('app_listetest');
+    }
+
+        return $this->render('test/edit.html.twig', [
+            'form' => $form->createView(),
+            'test' => $actuc,
+        ]);
+    }
+
+    #[Route('/test/{id}/delete', name: 'test_delete', methods: ['POST'])]
+    public function delete(Request $request, $id, EntityManagerInterface $entityManager): Response
+    {
+        // Utilisation de EntityManagerInterface pour récupérer l'entité Actuc
+        $actuc = $entityManager->getRepository(Test::class)->find($id);
+
+        if (!$actuc) {
+            throw $this->createNotFoundException('Le bonplan avec l\'ID ' . $id . ' n\'existe pas.');
+        }
+
+        // CSRF validation
+        if ($this->isCsrfTokenValid('delete' . $actuc->getId(), $request->request->get('_token'))) {
+            $entityManager->remove($actuc);
+            $entityManager->flush();
+            $this->addFlash('success', 'test supprimé avec succès!');
+        }
+
+        return $this->redirectToRoute('app_listetest');
+    }
 }
+
+

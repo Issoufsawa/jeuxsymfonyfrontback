@@ -9,41 +9,67 @@
 <link rel="stylesheet" href={{ asset("assets/img/jeux.jpg") }}>
 </head>
 <body>
-<header class="section fixed-top">
-<div class="header">
-    <div class="header-left">
-  <a><i class="bi bi-envelope-fill custom-icon"></i> conctat@exemple.com</a>
-  <a><i class="bi bi-telephone-fill custom-icon"></i> +1 5589 55488 55</a>
-  <a><i class="bi bi-geo-alt-fill custom-icon"></i> A108 Adam Street, NY</a>
-</div>
- 
-  <div class="header-right">
-     <a> <i class="bi bi-twitter custom-icon"></i></a>
-     <a ><i class="bi bi-facebook custom-icon"></i> </a>
-     <a><i class="bi bi-instagram custom-icon"></i> </a>
-     <a> <i class="bi bi-skype custom-icon"></i></a>
-     <a><i class="bi bi-linkedin custom-icon"></i> </a>
-  </div>
-</div>
-<div class="header">
-  <a href="{{ path('app_afficheractualite')}}" class="logo">Jeux-video.ci</a>
-  <div class="header-right">
-    <a class="nav-link dropdown-toggle" href="#" id="actusDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Actus
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="actusDropdown">
-          <li><a class="dropdown-item" href="{{ path('app_afficheactualitevideo') }}">Vidéos</a></li>
-          <li><a class="dropdown-item" href="{{ path('app_afficheactualiteimage') }}">Articles</a></li>
-        </ul>
-    <a class="nav-link" href="{{ path('app_afficherjeux')}}">Jeux</a>
-    <a class="nav-link" href="{{ path('app_affichertest')}}">Tests</a>
-    <a class="nav-link" href="{{ path('app_apercu') }}">Apercus</a>
-    <a class="nav-link" href="{{ path('app_affichervideo') }}">Multimedia</a>
-    <a class="nav-link" href="{{ path('app_afficherbonplan')}}">Bons plans</a>
-    <button type="button" class="btn btn-primary">Make an Appointment</button>
-  </div>
-</div>
+<header class="section fixed-top bg-light">
+    <div class="container-fluid">
+        <div class="row align-items-center py-2">
+        <nav class="navbar navbar-expand-md navbar-light p-0">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu1"
+                        aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation" style = " margin-left: 12px">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarMenu1">
+            <div class="col-12 col-md-6 d-flex flex-wrap header-left">
+                <a class="me-3"><i class="bi bi-envelope-fill custom-icon"></i> contact@exemple.com</a>
+                <a class="me-3"><i class="bi bi-telephone-fill custom-icon"></i> +1 5589 55488 55</a>
+                <a  class="me-3"><i class="bi bi-geo-alt-fill custom-icon"></i> A108 Adam Street, NY</a>
+            </div>
+            <div class="col-12 col-md-6 text-md-end header-right d-flex justify-content-md-end justify-content-center flex-wrap mt-2 mt-md-0">
+                <a class="me-3"><i class="bi bi-twitter custom-icon"></i></a>
+                <a class="me-3"><i class="bi bi-facebook custom-icon"></i></a>
+                <a class="me-3"><i class="bi bi-instagram custom-icon"></i></a>
+                <a class="me-3"><i class="bi bi-skype custom-icon"></i></a>
+                <a class="me-3"><i class="bi bi-linkedin custom-icon"></i></a>
+            </div>
+        </div>
+        </div>
+        </nav>
+        <div class="row align-items-center py-3"   >
+            <div class="col-12 col-md-6" >
+                <a href="{{ path('app_afficheractualite')}}" class="logo h4 text-decoration-none"  style = " margin-left: 150px" >Jeux-video.ci</a>
+            </div>
+            <div class="col-12 col-md-6 text-md-end"  >
+                <nav class="navbar navbar-expand-md navbar-light p-0">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                        aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarMenu" style = " margin-right: 100px"  >
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="actusDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Actus
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="actusDropdown">
+                                    <li><a class="dropdown-item" href="{{ path('app_afficheactualitevideo') }}">Vidéos</a></li>
+                                    <li><a class="dropdown-item" href="{{ path('app_afficheactualiteimage') }}">Articles</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="{{ path('app_afficherjeux') }}">Jeux</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ path('app_affichertest') }}">Tests</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ path('app_apercu') }}">Apercus</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ path('app_affichervideo') }}">Multimédia</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ path('app_afficherbonplan') }}">Bons plans</a></li>
+                            <li class="nav-item">
+                                <button type="button" class="btn btn-primary">Make an Appointment</button>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
 </header>
+
 
 
 <main  class="body">
@@ -73,63 +99,65 @@
      
   <hr>
   <h1>Tendance</h1>
-  <section  class="my-2 ">
+  <section  class="my-2" >
        
     <div class="container">
-      <div id="con" class="row gy-4 ">
+        <div id="con" class="row gy-4 ">
     
-        <div class="col-12 col-md-4" >
-            {% for jeu4 in jeux4 %}
+           <div class="col-12 col-md-4" >
+             {% for jeu4 in jeux4 %}
              <a href="{{ path('app_detaille', { 'id': jeu4.id }) }}">  
-          <div  id = "ten" class="card">
-            <img src="{{ asset('uploads/images/' ~ jeu4.imagePath) }}"class="card-img-top" alt="{{ jeu4.titre }}" style="width:100% ;height: 225px;">
-            <div class="card-img-overlay">
-              <button href="#" class="btn1">NEW JEU</button>              
-            </div>
-            <div class="card-body">
-              <p class="card-title">{{ jeu4.titre }} : (PS5,Xbox Series,Switch,PS4,Xbox <br> One,PC)</p>
-              <p class="act1">30/08/2021</p>
-              <p class="card-text">{{ jeu4.description }}</p>
-              <button href="#" class="btn2">PC</button>
-              <button href="#" class="btn3">XBOX SERIES</button>
-              <button href="#" class="btn4">SWITCH</button>
-              <button href="#" class="btn5">PSS</button>
-            </div>
-           
+                <div  id = "ten" class="card">
+                    <img src="{{ asset('uploads/images/' ~ jeu4.imagePath) }}"class="card-img-top" alt="{{ jeu4.titre }}" style="width:100% ;height: 225px;"  >
+                            <div class="card-img-overlay">
+                              <button href="#" class="btn1">NEW JEU</button>              
+                            </div>
+                              <div class="card-body">
+                                <p class="card-title">{{ jeu4.titre }} : (PS5,Xbox Series,Switch,PS4,Xbox <br> One,PC)</p>
+                                <p class="act1">30/08/2021</p>
+                                <p class="card-text">{{ jeu4.description }}</p>
+                                <button href="#" class="btn2">PC</button>
+                                <button href="#" class="btn3">XBOX SERIES</button>
+                                <button href="#" class="btn4">SWITCH</button>
+                                <button href="#" class="btn5">PSS</button>
+                             </div>
+                            
+                  
+              </a>
           </div>
-          <div class="card mb-3" style="max-width: 550px; height: 100px; margin-top: 7px;" >
-            <div class="row g-0" >
-              <div class="col-md-4">
-                <img src="{{ asset('uploads/images/' ~ jeu4.imagePath) }}"class="card-img-top" alt="{{ jeu4.titre }}" style="width: 100px; height: 100px;">
-              </div>
-              <div class="col-md-8" style="width: 130px;">
-                <div class="card-body">
-                  <p class="text">
-                   <span class="new">News Jeu :</span>{{ jeu4.titre }} :{{ jeu4.description }}
-                   <span class="date">28/08/2021 - 07:04 - 21690 vues <br>PC - XBOX SERIE </span>
-                  </p>
+         <div class="card mb-3" style="max-width: 550px; margin-top: 7px;" >
+          <div class="row g-0" >
+                <div class="col-4" >
+                  <img src="{{ asset('uploads/images/' ~ jeu4.imagePath) }}" class="card-img-top" alt="{{ jeu4.titre }}" style="width: 100%; height: 100px; object-fit: cover;">
                 </div>
-              </div>
-            </div>
-               </a>
-          </div>
-        {% else %}
-        <p>Aucun jeu trouvé.</p>
-    {% endfor %}
+                      <div class="col-md-8" style="width: 130px;">
+                        <div class="card-body">
+                          <p   class="text">
+                            <span class="new">News Jeu :</span> {{ jeu4.titre }} : {{ jeu4.description }}
+                            <span class="date d-block">28/08/2021 - 07:04 - 21690 vues <br>PC - XBOX SERIE</span>
+                          </p>
+                            </div>
+                            </div>
+                          </div>
+                            </div>
 
-        </div>
+                          {% else %}
+                          <p>Aucun jeu trouvé.</p>
+                      {% endfor %}
+
+                          </div>
       
-        <div class="col-12 col-md-4">
-        {% for jeu5 in jeux5 %}
-         <a href="{{ path('app_detaille', { 'id': jeu5.id }) }}">  
-          <div class="card mb-3" style="max-width: 550px; height: 100px;" >
+            <div class="col-12 col-md-4"  id="ver1">
+            {% for jeu5 in jeux5 %}
+            <a href="{{ path('app_detaille', { 'id': jeu5.id }) }}">  
+              <div class="card mb-3" style="max-width: 550px; height: 100px;"  id="ver" >
             <div class="row g-0" >
               <div class="col-md-4">
-                <img src="{{ asset('uploads/images/' ~ jeu5.imagePath) }}"class="card-img-top" alt="{{ jeu5.titre }}" style="width: 100px; height: 100px;">
+                <img src="{{ asset('uploads/images/' ~ jeu5.imagePath) }}"class="card-img-top" alt="{{ jeu5.titre }}" style="width: 100px; height: 100px;" id="img">
               </div>
               <div class="col-md-8" style="width: 130px;">
-                <div class="card-body">
-                  <p class="text">
+                <div class="card-body" >
+                  <p  class="text">
                    <span class="new">News Jeu :</span> {{ jeu5.titre }}  :{{ jeu5.description }}
                    <span class="date">28/08/2021 - 07:04 - 21690 vues <br>PC - XBOX SERIE </span>
                   </p>
@@ -139,14 +167,14 @@
               </a>
           </div>
           {% else %}
-        <p>Aucun jeu trouvé.</p>
-    {% endfor %}
-</div>
+            <p>Aucun jeu trouvé.</p>
+                {% endfor %}
+                </div>
 
-       <div class="col-12 col-md-4">
+           <div class="col-12 col-md-4">
           <div class="card">
             <span class="fil-actualité">Fil d'actualité</span>
-            <div id="fil-actualité" class="card-body">
+            <div id="fil-actualité" class="card-body"  >
               <p class="act"> 06/09 - NEWS - Alan Wake Remastered serait en <br> approche pour octobre</p>
               <p class="act">03/09 - NEWS - Horizon Forbidden West étale <br> ses éditions collectors mais jette un froid sur la <br> mise à niveau PS4 vers PS5</p>
               <p class="act">03/09 - NEWS - Horizon Forbidden West étale <br> ses éditions collectors mais jette un froid sur la <br> mise à niveau PS4 vers PS5</p>
@@ -159,6 +187,7 @@
             </div>
           </div>
         </div>
+    </div>
   </section>
 
   <hr>
@@ -187,10 +216,10 @@
             <div class="col-12 col-md-4">
              {% for jeu2 in jeux2 %}
               <a href="{{ path('app_detaille', { 'id': jeu2.id }) }}">  
-              <div class="card mb-3" style="max-width: 550px; height: 100px;" >
+              <div class="card mb-3" style="max-width: 550px; " >
                 <div class="row g-0" >
-                  <div class="col-md-4">
-                    <img src="{{ asset('uploads/images/' ~ jeu2.imagePath) }}"class="card-img-top" alt="{{ jeu2.titre }}" style="width: 100px; height: 100px;">
+                  <div class="col-4">
+                    <img src="{{ asset('uploads/images/' ~ jeu2.imagePath) }}"class="card-img-top" alt="{{ jeu2.titre }}" style="width: 100%; height: 100px; object-fit: cover;">
                   </div>
                   <div class="col-md-8" style="width: 130px;">
                     <div class="card-body">

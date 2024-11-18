@@ -98,7 +98,7 @@ h1{
     padding-left: 25px;
 
 }
-@media screen and (max-width: 496px) {
+/* @media screen and (max-width: 496px) {
   .header a {
     float: none;
     display: block;
@@ -109,7 +109,7 @@ h1{
     float: none;
    
   }
-}
+} */
 
 .ma-ligne {
   border-top: 2px solid #ccc;
@@ -167,18 +167,17 @@ position: absolute;
 font-weight: bold;
 font-size: 11px;
 
+
+}
+
 .new{
   color: rgb(110, 161, 33);
   font-size: 10px;
-  font-weight: bold;
-  
-  
- 
+  font-weight: bold; 
 }
 .date{
   font-weight: normal;
   font-size: 10px;
-}
 }
 .card{
   background-color: #ada9a93b;
@@ -227,4 +226,91 @@ font-size: 11px;
  font-size: 30px;
  font-weight: bold;
 }
+
+
+
+
+
+.custom-icon {
+  margin-right: 5px;
+}
+
+.header-left a, .header-right a {
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.header-left {
+  margin-bottom: 10px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Media Queries */
+/* @media (max-width: 767px) {
+  .header-left, .header-right {
+      justify-content: center;
+      text-align: center;
+  }
+  .header-left a, .header-right a {
+      display: block;
+      margin-bottom: 5px;
+  }
+} */
+
+
+@media (max-width: 768px) {
+  main.body  {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    position: absolute !important;
+    overflow: hidden;
+  }
+
+  .col{
+    margin-left:  95px !important;
+    margin-bottom: 30px !important;
+}
+
+#ver{
+   
+  display: flex !important;
+  flex-direction: column !important;
+
+  width: 100px!important;
+  height: 360px!important;
+margin-bottom: 15px  !important;
+
+}
+
+#ver1{
+  margin-left: 0px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  gap : 2px !important;
+  width: 500px !important;
+}
+/* #ten{
+  width: 400px !important;
+  
+} */
+ 
+
+#img{
+width: 90px!important;
+
+
+}
+
+}
+
+
+
+
+
 

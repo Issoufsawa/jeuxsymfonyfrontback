@@ -73,7 +73,7 @@
 {% block body %}
 
 <div class="container mt-5">
-    <h2 class="text-center">Liste des actualités en image</h2>
+    <h2 class="text-center">Liste des bonplans</h2>
     <table class="table table-striped table-bordered text-center">
         <thead class="thead-dark">
             <tr>
@@ -98,8 +98,13 @@
                             <p>Aucune image disponible</p>
                         {% endif %}
                     </td>
-                     <td><button type="submit" class="btn btn-success">Modifier</button></td>
-                   <td><button type="submit" class="btn btn-danger">Supprimer</button></td>
+                     <td><a href="{{ path('bonplan_edit', { id: bonplan.id }) }}" class="btn btn-success">Modifier</a></td>
+                  <td>
+    <form method="post" action="{{ path('bonplan_delete', { 'id': bonplan.id }) }}" onsubmit="return confirm('Voulez-vous vraiment supprimer cette actualite ?');">
+        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ bonplan.id) }}">
+        <button type="submit" class="btn btn-danger">Supprimer</button>
+    </form>
+</td>
                 </tr>
             {% endfor %}
         </tbody>

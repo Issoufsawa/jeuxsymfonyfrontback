@@ -68,5 +68,73 @@ public function listeactualitevideo(ManagerRegistry $mr) : Response
    return $this->render('listeactualiteimage/listeactualiteimage.html.twig',['allactualiteimage' => $allactualiteimage]);
 }
 
+#[Route('/actualite/{id}/edit', name: 'actualite_edit', methods: ['GET', 'POST'])]
+public function edit(Request $request, $id, EntityManagerInterface $entityManager): Response
+{
+    // Récupérer l'entité Actuc par son ID
+    $actuc = $entityManager->getRepository(Actualiteimage::class)->find($id);
 
+    if (!$actuc) {
+        throw $this->createNotFoundException('Le jeu avec l\'ID ' . $id . ' n\'existe pas.');
+    }
+
+    $form = $this->createForm(ActualiteimageType::class, $actuc);
+    $form->handleRequest($request);
+
+    // Traitement du formulaire
+    if ($form->isSubmitted() && $form->isValid()) {
+        // Gestion des fichiers, sauvegarde, redirection...
+    }
+        // Création du formulaire pour l'édition de l'entité
+$form = $this->createForm(ActualiteimageType::class, $actuc);
+$form->handleRequest($request);
+
+// Traitement du formulaire une fois soumis
+if ($form->isSubmitted() && $form->isValid()) {
+    // Vérification de l'upload de l'image
+    $imageFile = $form->get('image')->getData();
+    if ($imageFile) {
+        $newFilename = uniqid() . '.' . $imageFile->guessExtension();
+// Déplacement de l'image dans le répertoire configuré
+        $imageFile->move(
+            $this->getParameter('images_directory'), // Assurez-vous que ce paramètre est défini dans `services.yaml`
+            $newFilename
+        );
+
+        // Mise à jour du chemin de l'image dans l'entité
+        $actuc->setImagePath($newFilename);
+    }
+    // Sauvegarde des modifications dans la base de données
+    $entityManager->flush();
+
+    // Ajout d'un message flash pour indiquer que la modification a été réussie
+    $this->addFlash('success', 'actualite modifié avec succès!'); 
+// Redirection vers la liste des jeux    
+return $this->redirectToRoute('app_listeactualiteimage');
+}
+    return $this->render('actualite/edit.html.twig', [
+        'form' => $form->createView(),
+        'actualiteimage' => $actuc,
+    ]);
+}
+
+#[Route('/actualite/{id}/delete', name: 'actualite_delete', methods: ['POST'])]
+public function delete(Request $request, $id, EntityManagerInterface $entityManager): Response
+{
+    // Utilisation de EntityManagerInterface pour récupérer l'entité Actuc
+    $actuc = $entityManager->getRepository(Actualiteimage::class)->find($id);
+
+    if (!$actuc) {
+        throw $this->createNotFoundException('actualite avec l\'ID ' . $id . ' n\'existe pas.');
+    }
+
+    // CSRF validation
+    if ($this->isCsrfTokenValid('delete' . $actuc->getId(), $request->request->get('_token'))) {
+        $entityManager->remove($actuc);
+        $entityManager->flush();
+        $this->addFlash('success', 'actualite supprimé avec succès!');
+    }
+
+    return $this->redirectToRoute('app_listeactualiteimage');
+}
 }

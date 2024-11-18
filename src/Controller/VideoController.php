@@ -69,4 +69,30 @@ class VideoController extends AbstractController
        return $this->render('videoliste/videoliste.html.twig',['allvideo' => $allvideo]);
     }
 
+  
+
+
+
+
+    
+
+    #[Route('/video/{id}/delete', name: 'video_delete', methods: ['POST'])]
+    public function delete(Request $request, $id, EntityManagerInterface $entityManager): Response
+    {
+        // Utilisation de EntityManagerInterface pour récupérer l'entité Actuc
+        $actuc = $entityManager->getRepository(Video::class)->find($id);
+
+        if (!$actuc) {
+            throw $this->createNotFoundException('Le video avec l\'ID ' . $id . ' n\'existe pas.');
+        }
+
+        // CSRF validation
+        if ($this->isCsrfTokenValid('delete' . $actuc->getId(), $request->request->get('_token'))) {
+            $entityManager->remove($actuc);
+            $entityManager->flush();
+            $this->addFlash('success', 'video supprimé avec succès!');
+        }
+
+        return $this->redirectToRoute('app_videoliste');
+    }
 }

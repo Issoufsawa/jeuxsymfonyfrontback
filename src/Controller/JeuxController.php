@@ -59,6 +59,56 @@ class JeuxController extends AbstractController
         ]);
     }
 
+    #[Route('/jeux/{id}/edit', name: 'jeu_edit', methods: ['GET', 'POST'])]
+    public function edit(Request $request, $id, EntityManagerInterface $entityManager): Response
+    {
+        // Récupérer l'entité Actuc par son ID
+        $actuc = $entityManager->getRepository(Actuc::class)->find($id);
+    
+        if (!$actuc) {
+            throw $this->createNotFoundException('Le jeu avec l\'ID ' . $id . ' n\'existe pas.');
+        }
+    
+        $form = $this->createForm(ActucType::class, $actuc);
+        $form->handleRequest($request);
+    
+        // Traitement du formulaire
+        if ($form->isSubmitted() && $form->isValid()) {
+            // Gestion des fichiers, sauvegarde, redirection...
+        }
+            // Création du formulaire pour l'édition de l'entité
+    $form = $this->createForm(ActucType::class, $actuc);
+    $form->handleRequest($request);
+
+    // Traitement du formulaire une fois soumis
+    if ($form->isSubmitted() && $form->isValid()) {
+        // Vérification de l'upload de l'image
+        $imageFile = $form->get('image')->getData();
+        if ($imageFile) {
+            $newFilename = uniqid() . '.' . $imageFile->guessExtension();
+// Déplacement de l'image dans le répertoire configuré
+            $imageFile->move(
+                $this->getParameter('images_directory'), // Assurez-vous que ce paramètre est défini dans `services.yaml`
+                $newFilename
+            );
+
+            // Mise à jour du chemin de l'image dans l'entité
+            $actuc->setImagePath($newFilename);
+        }
+        // Sauvegarde des modifications dans la base de données
+        $entityManager->flush();
+
+        // Ajout d'un message flash pour indiquer que la modification a été réussie
+        $this->addFlash('success', 'Jeu modifié avec succès!'); 
+// Redirection vers la liste des jeux    
+return $this->redirectToRoute('app_jeuxliste');
+    }
+        return $this->render('jeux/edit.html.twig', [
+            'form' => $form->createView(),
+            'jeu' => $actuc,
+        ]);
+    }
+
     #[Route('/jeux/{id}/delete', name: 'jeu_delete', methods: ['POST'])]
     public function delete(Request $request, $id, EntityManagerInterface $entityManager): Response
     {

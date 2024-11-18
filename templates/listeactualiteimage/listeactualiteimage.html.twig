@@ -98,8 +98,13 @@
                             <p>Aucune image disponible</p>
                         {% endif %}
                     </td>
-                     <td><button type="submit" class="btn btn-success">Modifier</button></td>
-                   <td><button type="submit" class="btn btn-danger">Supprimer</button></td>
+                     <td><a href="{{ path('actualite_edit', { id: actualiteimage.id }) }}" class="btn btn-success">Modifier</a></td>
+                  <td>
+    <form method="post" action="{{ path('actualite_delete', { 'id': actualiteimage.id }) }}" onsubmit="return confirm('Voulez-vous vraiment supprimer cette actualite ?');">
+        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ actualiteimage.id) }}">
+        <button type="submit" class="btn btn-danger">Supprimer</button>
+    </form>
+</td>
                 </tr>
             {% endfor %}
         </tbody>

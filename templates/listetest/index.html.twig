@@ -98,8 +98,13 @@
                             <p>Aucune image disponible</p>
                         {% endif %}
                     </td>
-                     <td><button type="submit" class="btn btn-success">Modifier</button></td>
-                   <td><button type="submit" class="btn btn-danger">Supprimer</button></td>
+                     <td><a href="{{ path('test_edit', { id: test.id }) }}" class="btn btn-success">Modifier</a></td>
+                  <td>
+    <form method="post" action="{{ path('test_delete', { 'id': test.id }) }}" onsubmit="return confirm('Voulez-vous vraiment supprimer cet test ?');">
+        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ test.id) }}">
+        <button type="submit" class="btn btn-danger">Supprimer</button>
+    </form>
+</td>
                 </tr>
             {% endfor %}
         </tbody>
