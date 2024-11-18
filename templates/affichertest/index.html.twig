@@ -9,46 +9,70 @@
 <link rel="stylesheet" href={{ asset("assets/img/jeux.jpg") }}>
 </head>
 <body>
-<header class="section fixed-top">
-<div class="header">
-    <div class="header-left">
-  <a><i class="bi bi-envelope-fill custom-icon"></i> conctat@exemple.com</a>
-  <a><i class="bi bi-telephone-fill custom-icon"></i> +1 5589 55488 55</a>
-  <a><i class="bi bi-geo-alt-fill custom-icon"></i> A108 Adam Street, NY</a>
-</div>
- 
-  <div class="header-right">
-     <a> <i class="bi bi-twitter custom-icon"></i></a>
-     <a ><i class="bi bi-facebook custom-icon"></i> </a>
-     <a><i class="bi bi-instagram custom-icon"></i> </a>
-     <a> <i class="bi bi-skype custom-icon"></i></a>
-     <a><i class="bi bi-linkedin custom-icon"></i> </a>
-  </div>
-</div>
-<div class="header">
-  <a  href="{{ path('app_afficheractualite') }}" class="logo">Jeux-video.ci</a>
-  <div class="header-right">
- <a class="nav-link dropdown-toggle" href="#" id="actusDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Actus
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="actusDropdown">
-         <li><a class="dropdown-item" href="{{ path('app_afficheactualitevideo') }}">Vidéos</a></li>
-          <li><a class="dropdown-item" href="{{ path('app_afficheactualiteimage') }}">Articles</a></li>
-        </ul>
-    <a class="nav-link" href="{{ path('app_afficherjeux') }}">Jeux</a>
-    <a class="nav-link" href="{{ path('app_affichertest')}}">Tests</a>
-        <a class="nav-link" href="#">Apercus</a>
-    <a class="nav-link" href="{{path('app_affichervideo')}}">Multimedia</a>
-     <a class="nav-link" href="{{ path('app_afficherbonplan')}}">Bons plans</a>
-    <button type="button" class="btn btn-primary">Make an Appointment</button>
-  </div>
-</div>
+<header class="section fixed-top bg-light">
+    <div class="container-fluid">
+        <div class="row align-items-center py-3">
+        <nav class="navbar navbar-expand-md navbar-light p-0">
+                    
+                    <div class="collapse navbar-collapse" id="navbarMenu1">
+            <div class="col-12 col-md-6 d-flex flex-wrap header-left">
+                <a class="me-3"><i class="bi bi-envelope-fill custom-icon"></i> contact@exemple.com</a>
+                <a class="me-3"><i class="bi bi-telephone-fill custom-icon"></i> +1 5589 55488 55</a>
+                <a  class="me-3"><i class="bi bi-geo-alt-fill custom-icon"></i> A108 Adam Street, NY</a>
+            </div>
+            <div class="col-12 col-md-6 text-md-end header-right d-flex justify-content-md-end justify-content-center flex-wrap mt-2 mt-md-0">
+                <a class="me-3"><i class="bi bi-twitter custom-icon"></i></a>
+                <a class="me-3"><i class="bi bi-facebook custom-icon"></i></a>
+                <a class="me-3"><i class="bi bi-instagram custom-icon"></i></a>
+                <a class="me-3"><i class="bi bi-skype custom-icon"></i></a>
+                <a class="me-3"><i class="bi bi-linkedin custom-icon"></i></a>
+            </div>
+        </div>
+        </div>
+        </nav>
+        <div class="row align-items-center py-3"   >
+            <div class="col-12 col-md-6" >
+                <a href="{{ path('app_afficheractualite')}}" class="logo h4 text-decoration-none"  style = " margin-left: 150px" >Jeux-video.ci</a>
+            </div>
+            <div class="col-12 col-md-6 text-md-end"  >
+                <nav class="navbar navbar-expand-md navbar-light p-0">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                        aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarMenu" style = " margin-right: 100px"  >
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="actusDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Actus
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="actusDropdown">
+                                    <li><a class="dropdown-item" href="{{ path('app_afficheactualitevideo') }}">Vidéos</a></li>
+                                    <li><a class="dropdown-item" href="{{ path('app_afficheactualiteimage') }}">Articles</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="{{ path('app_afficherjeux') }}">Jeux</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ path('app_affichertest') }}">Tests</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ path('app_apercu') }}">Apercus</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ path('app_affichervideo') }}">Multimédia</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ path('app_afficherbonplan') }}">Bons plans</a></li>
+                            <li class="nav-item">
+                                 <a href="{{ path('app_appointement') }}" class="btn btn-primary">Make an Appointment</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
 </header>
+
+
 <main  class="body">
 <div >
-<h1>Suivre jeuxvideo.com/Toute l'actu de la Xbox Series X et S et ses jeux </h1>
+<h1>Tests </h1>
 <hr> 
-  <div class="row row-cols-1 row-cols-md-4 g-2">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
 
     {% for test in alltest %}
         <div class="col">

@@ -69,12 +69,16 @@ color:rgb(72, 163, 224);
     display: flex;
      margin-left: 200px;
      margin-right: 200px;
-     margin-top: 130px ;
+     margin-top: 120px ;
 }
 
 .col{
-    margin-left: 60px; 
-    margin-bottom: 30px;
+    margin-left: 20px; 
+    margin-bottom: 30px; 
+    /* margin-right: 0px; */
+
+    
+
 }
 h1{
     font-size: 15px;
@@ -165,7 +169,7 @@ h1{
 
 position: absolute;
 font-weight: bold;
-font-size: 11px;
+font-size: 9px;
 
 
 }
@@ -181,6 +185,7 @@ font-size: 11px;
 }
 .card{
   background-color: #ada9a93b;
+ 
 
   
 }
@@ -274,7 +279,7 @@ font-size: 11px;
 
   .col{
     margin-left:  95px !important;
-    margin-bottom: 30px !important;
+    margin-bottom: 25px !important;
 }
 
 #ver{
@@ -306,11 +311,34 @@ width: 90px!important;
 
 
 }
+#contact{
+  margin-left: 150px !important;
+  margin-right: 150px !important;
+
+ position: relative !important;
+ overflow: visible;
+ /* padding-right: 150px !important; */
+ padding-left: 0 !important;
+    padding-right: 0 !important;
+    
+   
+ 
 
 }
 
 
 
+}
 
+.contact{
+ display: flex;
+ margin-left: 200px;
+
+}
+h2{
+ margin-left: 30px;
+ font-size: 19px;
+ font-weight: bold;
+}
 
 
