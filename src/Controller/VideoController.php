@@ -44,7 +44,7 @@ class VideoController extends AbstractController
                     $video->setVideoPath($newFilename);
 
                     
-             
+                    $video->setCreateAd(new \DateTime());
     
                     // Sauvegarder dans la base de données
                     $em->persist($video);

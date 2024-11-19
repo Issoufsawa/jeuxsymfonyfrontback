@@ -24,7 +24,10 @@ class ActucController extends  AbstractController
           $entityManager->persist($actuc);
          $entityManager->flush();
 
-    //         return $this->redirectToRoute('app_actuc'); // ou une autre route après la soumission
+         if (!$actuc->getDate()) {
+            $actuc->setDate(new \DateTime()); // Définit la date actuelle par défaut
+        }
+
       }
 
 

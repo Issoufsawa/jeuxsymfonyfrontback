@@ -34,6 +34,9 @@ class Video
     
       // @ORM\Column(type="string", length=255)
       private ?File $videoFile = null;
+
+      #[ORM\Column(type: 'datetime')]
+    private ?\DateTimeInterface $createAd = null;
   
       // getter and setter methods
   
@@ -45,17 +48,17 @@ class Video
         return $this->id;
     }
 
-    // public function getCreateAd(): ?\DateTimeInterface
-    // {
-    //     return $this->createAd;
-    // }
+    public function getCreateAd(): ?\DateTimeInterface
+    {
+        return $this->createAd;
+    }
 
-    // public function setCreateAd(\DateTimeInterface $createAd): self
-    // {
-    //     $this->createAd = $createAd;
+    public function setCreateAd(\DateTimeInterface $createAd): self
+    {
+        $this->createAd = $createAd;
 
-    //     return $this;
-    // }
+        return $this;
+    }
         public function getTitre(): ?string
         {
             return $this->titre;

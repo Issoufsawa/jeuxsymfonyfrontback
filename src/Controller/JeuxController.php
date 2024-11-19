@@ -35,10 +35,13 @@ class JeuxController extends AbstractController
                 $actuc->setImagePath($newFilename);
             }
 
+            $actuc->setCreateAd(new \DateTime());
             // Sauvegarde de l'entité dans la base de données
             $entityManager->persist($actuc);
             $entityManager->flush();
 
+
+            // dd($actuc);
             $this->addFlash('success', 'Jeu ajouté avec succès!');
             return $this->redirectToRoute('app_jeux');
         }

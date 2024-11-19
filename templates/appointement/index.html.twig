@@ -73,39 +73,53 @@
    
 <div class="container d-flex justify-content-center align-items-center mt-5" style="min-height: 80vh;"  id ="contact">
          
-    <div class="row justify-content-center w-100">
-    <div class="col-md-8 col-lg-6"   id="contact1">
-    <form method="post" class="p-4 border rounded shadow">
-        <div class="mb-3">
-            <label for="name" class="form-label">Nom complet</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom"  pattern="[A-Za-zÀ-ÿ\s]+" title="Seuls les caractères alphabétiques sont autorisés" required>
-        </div>
-        <div class="mb-3">
-            <label for="email" class="form-label">Adresse email</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Votre email"  required>
-        </div>
-        <div class="mb-3">
-            <label for="subject" class="form-label">Sujet</label>
-            <input type="text" class="form-control" id="subject" name="subject" placeholder="Sujet de votre message" pattern="[A-Za-zÀ-ÿ\s]+" title="Seuls les caractères alphabétiques sont autorisés" required>
-        </div>
-        <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Votre message"  pattern="[A-Za-zÀ-ÿ\s]+" title="Seuls les caractères alphabétiques sont autorisés" required></textarea>
-        </div>
-        <div class="text-center">
-            <button type="submit" class="btn btn-primary">Envoyer</button>
-        </div>
-    </form>
+<div class="row justify-content-center w-100">
+                        
+    <div class="col-md-8 col-lg-6" id="contact1">
+                <h1 id="rendez">Rendez-vous</h1>
+        <form method="post" class="p-4 border rounded shadow">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nom complet</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom" pattern="[A-Za-zÀ-ÿ\s]+" title="Seuls les caractères alphabétiques sont autorisés" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Adresse email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Votre email" required>
+            </div>
+            <div class="mb-3">
+                <label for="subject" class="form-label">Sujet</label>
+                <input type="text" class="form-control" id="subject" name="subject" placeholder="Sujet de votre message" pattern="[A-Za-zÀ-ÿ\s]+" title="Seuls les caractères alphabétiques sont autorisés" required>
+            </div>
+            <div class="mb-3">
+                <label for="date" class="form-label">Date du rendez-vous</label>
+                <input type="date" class="form-control" id="date" name="date" required>
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Numéro de téléphone</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Votre numéro de téléphone" pattern="^\+?[0-9\s\-]{7,15}$" title="Veuillez entrer un numéro de téléphone valide (ex : +123456789 ou 123-456-7890)" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Votre message"
+                          pattern="^[A-Za-zÀ-ÿ\s]+$" 
+                          title="Seuls les caractères alphabétiques et les espaces sont autorisés" required></textarea>
+            </div>
 
-    {% for message in app.flashes('success') %}
-        <div class="alert alert-success mt-3">{{ message }}</div>
-    {% endfor %}
-    {% for message in app.flashes('error') %}
-        <div class="alert alert-danger mt-3">{{ message }}</div>
-    {% endfor %}
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </div>
+        </form>
+
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success mt-3">{{ message }}</div>
+        {% endfor %}
+        {% for message in app.flashes('error') %}
+            <div class="alert alert-danger mt-3">{{ message }}</div>
+        {% endfor %}
+    </div>
 </div>
 
-</div>
+
 </div>
 
 </main>

@@ -81,8 +81,11 @@
                 <th scope="col">#</th>
                 <th scope="col">Nom</th>
                 <th scope="col">E-mail</th>
-                <th scope="col">Sujet</th>
+                <th scope="col">Numero de téléphone</th>
                 <th scope="col">Message</th>
+                <th scope="col">Date du rendez-vous</th>
+                <th scope="col">Sujet</th>
+                <th scope="col">Date de reception du rendez-vous/th>
             </tr>
         </thead>
         <tbody>
@@ -91,8 +94,11 @@
                     <th scope="row">{{ loop.index }}</th>
                     <td>{{ test.name }}</td>
                     <td>{{ test.email}}</td>
+                    <td>{{ test.phone }} </td>
+                    <td>{{ test.message }}</td>
+                    <td> {{ test.date|date('Y-m-d') }}</td>
                     <td>{{ test.subject }} </td>
-                     <td>{{ test.message }}</td>
+                    <td>{{ test.createAd|date('Y-m-d H:i:s')}}</td>      
               </tr>
             {% endfor %}
         </tbody>

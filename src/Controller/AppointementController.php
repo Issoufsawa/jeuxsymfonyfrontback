@@ -17,32 +17,47 @@ class AppointementController extends AbstractController
             $name = $request->request->get('name');
             $email = $request->request->get('email');
             $subject = $request->request->get('subject');
+            $date = $request->request->get('date');
+            $phone = $request->request->get('phone');
             $message = $request->request->get('message');
-
-            // Valider les données si nécessaire
-            if (empty($name) || empty($email) || empty($subject) || empty($message)) {
+    
+            // Valider les données
+            if (empty($name) || empty($email) || empty($subject) || empty($date) || empty($phone) || empty($message)) {
                 $this->addFlash('error', 'Tous les champs sont obligatoires.');
                 return $this->redirectToRoute('app_appointement');
             }
-
+    
+            // Convertir la date en objet \DateTime
+            try {
+                $dateObject = new \DateTime($date);
+            } catch (\Exception $e) {
+                $this->addFlash('error', 'La date fournie est invalide.');
+                return $this->redirectToRoute('app_appointement');
+            }
+    
+            // Créer l'objet Appointement et assigner les données
             $appointement = new Appointement();
             $appointement->setName($name);
             $appointement->setEmail($email);
             $appointement->setSubject($subject);
-            $appointement->setMessage($message);
-
+            $appointement->setDate($dateObject);
+            $appointement->setPhone($phone);  
+             $appointement->setMessage($message);
+            $appointement->setCreateAd(new \DateTime());
+    
+            // Sauvegarder l'entité
             try {
                 $entityManager->persist($appointement);
                 $entityManager->flush();
-
+    
                 $this->addFlash('success', 'Votre message a été envoyé avec succès.');
             } catch (\Exception $e) {
                 $this->addFlash('error', 'Une erreur est survenue lors de l\'enregistrement.');
             }
-
+    
             return $this->redirectToRoute('app_appointement');
         }
-
+    
         return $this->render('appointement/index.html.twig');
     }
-}
+}    
