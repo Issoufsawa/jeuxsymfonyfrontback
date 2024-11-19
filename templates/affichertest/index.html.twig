@@ -81,7 +81,7 @@
                 <img src="{{ asset('uploads/images/' ~ test.imagePath) }}"class="card-img-top" alt="{{ test.titre }}" style="width:100%">
                 <div class="card-img-overlay">
                     <button href="#" class="btn1">NEW JEU</button>
-                    <p id="uni" class="card-text">{{ test.description }}</p>
+                    <p id="uni" class="card-text">{{ test.description|slice(0, 100) }}</p>
                 </div>
             </div>
             </a>

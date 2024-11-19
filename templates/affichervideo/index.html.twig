@@ -83,7 +83,7 @@
             {% else %}
                 <p>Aucune vidéo disponible.</p>
             {% endif %}
-            <p id="uni1" class="card-text">{{ vi.description }}</p>
+            <p id="uni1" class="card-text">{{ vi.description|slice(0, 100) }}</p>
             </div>
             {% else %}
             <p>Aucune vidéo trouvée.</p>

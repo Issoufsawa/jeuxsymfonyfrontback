@@ -80,7 +80,7 @@
                 <img src="{{ asset('uploads/images/' ~ actualiteimage.imagePath) }}"class="card-img-top" alt="{{ actualiteimage.titre }}" style="width:100%">
                 <div class="card-img-overlay">
                     <button href="#" class="btn1">NEW JEU</button>
-                    <p id="uni" class="card-text">{{ actualiteimage.description }}  du :{{ actualiteimage.createAd|date('d/m/Y H:i') }}</p>
+                    <p id="uni" class="card-text">{{ actualiteimage.description|slice(0, 100) }}  du :{{ actualiteimage.createAd|date('d/m/Y H:i') }}</p>
                 </div>
             </div>
             </a>

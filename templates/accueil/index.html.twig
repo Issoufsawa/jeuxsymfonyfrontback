@@ -78,13 +78,13 @@
 
     {% for jeu in jeux %}
      
-        <div class="col">
+        <div class="col" id="col1">
             <a href="{{ path('app_detaille', { 'id': jeu.id }) }}">  
             <div class="card" style="width: 300px">
                 <img   src="{{ asset('uploads/images/' ~ jeu.imagePath) }}"class="card-img-top" alt="{{ jeu.titre }}" style="width:100%">
                 <div class="card-img-overlay">
                     <button href="#" class="btn1">NEW JEU</button>
-                    <p id="uni" class="card-text">{{ jeu.description }}</p>
+                    <p id="uni" class="card-text">{{ jeu.description|slice(0, 100) }}</p>
                 </div>
                 </div>
                </a>
@@ -112,7 +112,7 @@
                               <div class="card-body">
                                 <p class="card-title">{{ jeu4.titre }} : (PS5,Xbox Series,Switch,PS4,Xbox <br> One,PC)</p>
                                 <p class="act1">30/08/2021</p>
-                                <p class="card-text">{{ jeu4.description }}</p>
+                                <p class="card-text">{{ jeu4.description|slice(0, 100) }}</p>
                                 <button href="#" class="btn2">PC</button>
                                 <button href="#" class="btn3">XBOX SERIES</button>
                                 <button href="#" class="btn4">SWITCH</button>
@@ -131,7 +131,7 @@
                       <div class="col-md-8" style="width: 130px;">
                         <div class="card-body">
                           <p   class="text">
-                            <span class="new">News Jeu :</span> {{ jeu4.titre }} : {{ jeu4.description }}
+                            <span class="new">News Jeu :</span> {{ jeu4.titre }} : {{ jeu4.description|slice(0, 100) }}
                             <span class="date d-block">28/08/2021 - 07:04 - 21690 vues <br>PC - XBOX SERIE</span>
                           </p>
                             </div>
@@ -156,7 +156,7 @@
               <div class="col-md-8" style="width: 130px;">
                 <div class="card-body" >
                   <p  class="text">
-                   <span class="new">News Jeu :</span> {{ jeu5.titre }}  :{{ jeu5.description }}
+                   <span class="new">News Jeu :</span> {{ jeu5.titre }}  :{{ jeu5.description|slice(0, 100) }}
                    <span class="date">28/08/2021 - 07:04 - 21690 vues <br>PC - XBOX SERIE </span>
                   </p>
                 </div>
@@ -174,7 +174,7 @@
             <span class="fil-actualité">Fil d'actualité</span>
             <div id="fil-actualité" class="card-body"  >
             {% for actualiteimage1 in actualiteimage %}
-          <p class="act">{{ actualiteimage1.createAd|date('d/m/Y H:i') }}- NEWS - {{ actualiteimage1.titre }} : {{ actualiteimage1.description }}</p>
+          <p class="act">{{ actualiteimage1.createAd|date('d/m/Y H:i') }}- NEWS - {{ actualiteimage1.titre }} : {{ actualiteimage1.description|slice(0, 100) }}</p>
         {% endfor %}            
             </div>
           </div>
@@ -199,7 +199,7 @@
             {% else %}
                 <p>Aucune vidéo disponible.</p>
             {% endif %}
-            <p id="uni1" class="card-text">{{ vi.description }} </p>
+            <p id="uni1" class="card-text">{{ vi.description|slice(0, 100) }} </p>
             </div>
             {% else %}
             <p>Aucune vidéo trouvée.</p>
@@ -216,7 +216,7 @@
                   <div class="col-md-8" style="width: 130px;">
                     <div class="card-body">
                       <p class="text">
-                       <span class="new">News Jeu :</span>  {{ jeu2.titre }}  :{{ jeu2.description }}
+                       <span class="new">News Jeu :</span>  {{ jeu2.titre }}  :{{ jeu2.description|slice(0, 100) }}
                        <span class="date">28/08/2021 - 07:04 - 21690 vues <br>PC - XBOX SERIE </span>
                       </p>
                     </div>

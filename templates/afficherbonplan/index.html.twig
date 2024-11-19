@@ -81,7 +81,7 @@
                 <img src="{{ asset('uploads/images/' ~ bonplan.imagePath) }}"class="card-img-top" alt="{{ bonplan.titre }}" style="width:100%">
                 <div class="card-img-overlay">
                     <button href="#" class="btn1">NEW JEU</button>
-                    <p id="uni" class="card-text">{{ bonplan.description }} du :{{ bonplan.createAd|date('d/m/Y H:i') }}</p>
+                    <p id="uni" class="card-text">{{ bonplan.description|slice(0, 100) }} du :{{ bonplan.createAd|date('d/m/Y H:i') }}</p>
                 </div>
             </div>
             </a>
