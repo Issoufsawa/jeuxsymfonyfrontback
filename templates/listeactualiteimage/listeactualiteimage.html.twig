@@ -82,6 +82,7 @@
                 <th scope="col">Titre</th>
                 <th scope="col">Description</th>
                 <th scope="col">Image</th>
+                 <th scope="col">Date</th>
                 <th scope="col">Modifier</th>
                 <th scope="col">Supprimer</th>
             </tr>
@@ -99,6 +100,7 @@
                             <p>Aucune image disponible</p>
                         {% endif %}
                     </td>
+                      <td>{{ actualiteimage.createAd|date('d/m/Y H:i') }}</td>
                      <td><a href="{{ path('actualite_edit', { id: actualiteimage.id }) }}" class="btn btn-success">Modifier</a></td>
                   <td>
     <form method="post" action="{{ path('actualite_delete', { 'id': actualiteimage.id }) }}" onsubmit="return confirm('Voulez-vous vraiment supprimer cette actualite ?');">

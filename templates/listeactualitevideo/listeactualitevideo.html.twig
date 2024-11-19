@@ -27,6 +27,7 @@
                 <th scope="col">Titre</th>
                 <th scope="col">Description</th>
                 <th scope="col">Video</th>
+                <th scope="col">Date</th>
                 <th scope="col">Modifier</th>
                 <th scope="col">Supprimer</th>
             </tr>
@@ -48,6 +49,7 @@
                             <p>Aucune vidéo disponible.</p>
                         {% endif %}
                     </td>
+                    <td>{{ actualitevideo.createAd|date('d/m/Y H:i') }}</td>
                      <td><button type="submit" class="btn btn-success">Modifier</button></td>
                    <td><button type="submit" class="btn btn-danger">Supprimer</button></td>
                 </tr>
