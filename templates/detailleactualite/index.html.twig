@@ -81,7 +81,7 @@
 </div>
  </div>
  <h1 class="titre">{{detailleactualite.titre }}</h1>
-
+   <h1>{{ detailleactualite.createAd|date('d/m/Y H:i') }}</h1>
   <h1>{{ detailleactualite.description }}</h1>
 
  <hr>
@@ -95,7 +95,7 @@
                 <img   src="{{ asset('uploads/images/' ~ jeu.imagePath) }}"class="card-img-top" alt="{{ jeu.titre }}" style="width:100%">
                 <div class="card-img-overlay">
                     <button href="#" class="btn1">NEW JEU</button>
-                    <p id="uni" class="card-text">{{ jeu.description }}</p>
+                    <p id="uni" class="card-text">{{ jeu.description }} du :{{ jeu.createAd|date('d/m/Y H:i') }}</p>
                 </div>
                 </div>
                   </a>

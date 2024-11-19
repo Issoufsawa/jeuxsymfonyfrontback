@@ -85,7 +85,7 @@
             {% else %}
                 <p>Aucune vidéo disponible.</p>
             {% endif %}
-            <p id="uni1" class="card-text">{{ actualitevideo.description }}</p>
+            <p id="uni1" class="card-text">{{ actualitevideo.description }} du:{{actualitevideo.createAd|date('d/m/Y H:i') }} </p>
       
     </div>
 {% else %}

@@ -74,13 +74,13 @@
   <div class="row row-cols-1 row-cols-md-4 g-2">
 
     {% for actualiteimage in allactualiteimage %}
-        <div class="col">
+        <div class="col" id="col1">
           <a href="{{ path('app_detailleactualite', { 'id': actualiteimage.id }) }}">  
             <div class="card" style="width: 300px ">
                 <img src="{{ asset('uploads/images/' ~ actualiteimage.imagePath) }}"class="card-img-top" alt="{{ actualiteimage.titre }}" style="width:100%">
                 <div class="card-img-overlay">
                     <button href="#" class="btn1">NEW JEU</button>
-                    <p id="uni" class="card-text">{{ actualiteimage.description }}</p>
+                    <p id="uni" class="card-text">{{ actualiteimage.description }}  du :{{ actualiteimage.createAd|date('d/m/Y H:i') }}</p>
                 </div>
             </div>
             </a>

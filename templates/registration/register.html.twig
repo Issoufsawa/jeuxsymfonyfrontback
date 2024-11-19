@@ -13,9 +13,6 @@
         <!-- Custom styles for this template-->
         <link href="{{ asset('assets/admin/css/sb-admin-2.min.css') }}" rel="stylesheet">
         
-
-
-
 <style>
     .form-container {
         max-width: 500px;
@@ -71,8 +68,6 @@
 <body id="page-top">
 {{ include('admin/includes/header.html.twig') }}
 
-
-
 {% block body %}
 
 <div class="form-container">
@@ -80,7 +75,7 @@
 
     {{ form_errors(registrationForm) }}
 
-    {{ form_start(registrationForm) }}
+        {{ form_start(registrationForm) }}
         {{ form_row(registrationForm.email, {'attr': {'class': 'form-control'}}) }}
         
         {{ form_row(registrationForm.plainPassword, {
@@ -105,8 +100,6 @@
 {% endblock %}
 
 {{ include('admin/includes/footer.html.twig') }}
-
-
 
 {% block javascripts %}
     <!-- Bootstrap core JavaScript-->

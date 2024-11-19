@@ -68,8 +68,9 @@
 </header>
 <main  class="body">
 <div >
+ <h1>Bons plans</h1>
 <h1>Retrouvez nos meilleurs plans JV et High Tech ! </h1>
- <h2>Bons plans</h2>
+
 <hr> 
   <div class="row row-cols-1 row-cols-md-4 g-4">
 
@@ -80,7 +81,7 @@
                 <img src="{{ asset('uploads/images/' ~ bonplan.imagePath) }}"class="card-img-top" alt="{{ bonplan.titre }}" style="width:100%">
                 <div class="card-img-overlay">
                     <button href="#" class="btn1">NEW JEU</button>
-                    <p id="uni" class="card-text">{{ bonplan.description }}</p>
+                    <p id="uni" class="card-text">{{ bonplan.description }} du :{{ bonplan.createAd|date('d/m/Y H:i') }}</p>
                 </div>
             </div>
             </a>

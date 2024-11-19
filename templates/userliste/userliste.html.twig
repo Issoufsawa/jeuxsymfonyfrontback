@@ -18,7 +18,8 @@
 {{ include('admin/includes/header.html.twig') }}
 {% block body %}
     <div class="container mt-5">
-        <h2 class="text-center">Admin List</h2>
+    <h2 class="text-center">Admin List</h2>
+    <div class="table-responsive">
         <table class="table table-striped table-bordered text-center">
             <thead class="thead-dark">
                 <tr>
@@ -34,18 +35,20 @@
             <tbody>
                 {% for user in alluser %}
                     <tr>
-                        <th scope="row">{{ loop.index }}</th> <!-- Ajoute un compteur automatique -->
+                        <th scope="row">{{ loop.index }}</th>
                         <td>{{ user.nom }}</td>
                         <td>{{ user.prenom }}</td>
                         <td>{{ user.email }}</td>
                         <td>{{ user.contact }}</td>
-                        <td>{{ user.roles|join(',')}}</td>
+                        <td>{{ user.roles|join(', ') }}</td>
                         <td>{{ user.fonction }}</td>
                     </tr>
                 {% endfor %}
             </tbody>
         </table>
     </div>
+</div>
+
 {% endblock %}
 {{ include('admin/includes/footer.html.twig') }}
 {% block javascripts %}

@@ -174,7 +174,7 @@
             <span class="fil-actualité">Fil d'actualité</span>
             <div id="fil-actualité" class="card-body"  >
             {% for actualiteimage1 in actualiteimage %}
-          <p class="act">06/09 - NEWS - {{ actualiteimage1.titre }} : {{ actualiteimage1.description }}</p>
+          <p class="act">{{ actualiteimage1.createAd|date('d/m/Y H:i') }}- NEWS - {{ actualiteimage1.titre }} : {{ actualiteimage1.description }}</p>
         {% endfor %}            
             </div>
           </div>
@@ -199,7 +199,7 @@
             {% else %}
                 <p>Aucune vidéo disponible.</p>
             {% endif %}
-            <p id="uni1" class="card-text">{{ vi.description }}</p>
+            <p id="uni1" class="card-text">{{ vi.description }} </p>
             </div>
             {% else %}
             <p>Aucune vidéo trouvée.</p>
