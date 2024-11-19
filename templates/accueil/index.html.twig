@@ -173,15 +173,9 @@
           <div class="card">
             <span class="fil-actualité">Fil d'actualité</span>
             <div id="fil-actualité" class="card-body"  >
-              <p class="act"> 06/09 - NEWS - Alan Wake Remastered serait en <br> approche pour octobre</p>
-              <p class="act">03/09 - NEWS - Horizon Forbidden West étale <br> ses éditions collectors mais jette un froid sur la <br> mise à niveau PS4 vers PS5</p>
-              <p class="act">03/09 - NEWS - Horizon Forbidden West étale <br> ses éditions collectors mais jette un froid sur la <br> mise à niveau PS4 vers PS5</p>
-              <p class="act"> 06/09 - NEWS - Alan Wake Remastered serait en <br> approche pour octobre</p>
-              <p class="act">03/09 - NEWS - Horizon Forbidden West étale <br> ses éditions collectors mais jette un froid sur la <br> mise à niveau PS4 vers PS5</p>
-              <p class="act">03/09 - NEWS - Horizon Forbidden West étale <br> ses éditions collectors mais jette un froid sur la <br> mise à niveau PS4 vers PS5</p>
-              <p class="act">03/09 - NEWS - Horizon Forbidden West étale <br> ses éditions collectors mais jette un froid sur la <br> mise à niveau PS4 vers PS5</p>
-              <p class="act">03/09 - NEWS - Horizon Forbidden West étale <br> ses éditions collectors mais jette un froid sur la <br> mise à niveau PS4 vers PS5</p>
-            
+            {% for actualiteimage1 in actualiteimage %}
+          <p class="act">06/09 - NEWS - {{ actualiteimage1.titre }} : {{ actualiteimage1.description }}</p>
+        {% endfor %}            
             </div>
           </div>
         </div>
