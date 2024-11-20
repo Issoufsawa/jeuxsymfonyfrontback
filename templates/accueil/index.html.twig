@@ -84,7 +84,7 @@
                 <img   src="{{ asset('uploads/images/' ~ jeu.imagePath) }}"class="card-img-top" alt="{{ jeu.titre }}" style="width:100%">
                 <div class="card-img-overlay">
                     <button href="#" class="btn1">NEW JEU</button>
-                    <p id="uni" class="card-text">{{ jeu.description|slice(0, 100) }}</p>
+                    <p id="uni" class="card-text">{{ jeu.description|slice(0, 100) }} du :{{jeu.createAd|date('d/m/Y H:i') }}</p>
                 </div>
                 </div>
                </a>
@@ -111,7 +111,7 @@
                             </div>
                               <div class="card-body">
                                 <p class="card-title">{{ jeu4.titre }} : (PS5,Xbox Series,Switch,PS4,Xbox <br> One,PC)</p>
-                                <p class="act1">30/08/2021</p>
+                                <p class="act1">{{ jeu4.createAd|date('d/m/Y') }}</p>
                                 <p class="card-text">{{ jeu4.description|slice(0, 100) }}</p>
                                 <button href="#" class="btn2">PC</button>
                                 <button href="#" class="btn3">XBOX SERIES</button>
@@ -132,7 +132,7 @@
                         <div class="card-body">
                           <p   class="text">
                             <span class="new">News Jeu :</span> {{ jeu4.titre }} : {{ jeu4.description|slice(0, 100) }}
-                            <span class="date d-block">28/08/2021 - 07:04 - 21690 vues <br>PC - XBOX SERIE</span>
+                            <span class="date d-block">{{jeu4.createAd|date('d/m/Y H:i') }}</span>
                           </p>
                             </div>
                             </div>
@@ -157,7 +157,7 @@
                 <div class="card-body" >
                   <p  class="text">
                    <span class="new">News Jeu :</span> {{ jeu5.titre }}  :{{ jeu5.description|slice(0, 100) }}
-                   <span class="date">28/08/2021 - 07:04 - 21690 vues <br>PC - XBOX SERIE </span>
+                   <span class="date">{{jeu5.createAd|date('d/m/Y H:i') }}</span>
                   </p>
                 </div>
               </div>
@@ -199,7 +199,7 @@
             {% else %}
                 <p>Aucune vidéo disponible.</p>
             {% endif %}
-            <p id="uni1" class="card-text">{{ vi.description|slice(0, 100) }} </p>
+            <p id="uni1" class="card-text">{{ vi.description|slice(0, 100) }} du:{{vi.createAd|date('d/m/Y') }} </p>
             </div>
             {% else %}
             <p>Aucune vidéo trouvée.</p>
@@ -217,7 +217,7 @@
                     <div class="card-body">
                       <p class="text">
                        <span class="new">News Jeu :</span>  {{ jeu2.titre }}  :{{ jeu2.description|slice(0, 100) }}
-                       <span class="date">28/08/2021 - 07:04 - 21690 vues <br>PC - XBOX SERIE </span>
+                       <span class="date">{{jeu2.createAd|date('d/m/Y H:i') }}</span>
                       </p>
                     </div>
                   </div>

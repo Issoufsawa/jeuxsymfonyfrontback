@@ -28,7 +28,6 @@
                 <th scope="col">Description</th>
                 <th scope="col">Video</th>
                 <th scope="col">Date de publication</th>
-                <th scope="col">Modifier</th>
                 <th scope="col">Supprimer</th>
             </tr>
         </thead>
@@ -50,8 +49,10 @@
                         {% endif %}
                     </td>
                     <td>{{ actualitevideo.createAd|date('d/m/Y H:i') }}</td>
-                     <td><button type="submit" class="btn btn-success">Modifier</button></td>
-                   <td><button type="submit" class="btn btn-danger">Supprimer</button></td>
+                  <td>  <form method="post" action="{{ path('actualitevideo_delete', { 'id': actualitevideo.id }) }}" onsubmit="return confirm('Voulez-vous vraiment supprimer cette video ?');">
+        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ actualitevideo.id) }}">
+        <button type="submit" class="btn btn-danger">Supprimer</button>
+    </form></td>
                 </tr>
             {% endfor %}
         </tbody>

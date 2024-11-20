@@ -70,10 +70,6 @@ class VideoController extends AbstractController
     }
 
   
-
-
-
-
     
 
     #[Route('/video/{id}/delete', name: 'video_delete', methods: ['POST'])]
