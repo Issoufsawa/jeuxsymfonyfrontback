@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class AfficheractualiteController extends AbstractController
 {
-    #[Route('/accueil', name: 'app_afficheractualite')]
+    #[Route('/', name: 'app_afficheractualite')]
     public function index(actucRepository $actucRepository ,videoRepository $videoRepository, actualiteimageRepository $actualiteimageRepository ): Response
     {
         $jeux = $actucRepository->findFirstthree(); // Cette méthode récupère  les jeux de la table
