@@ -12,11 +12,16 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DetailleController extends AbstractController
 {
-    #[Route('/detaille/{id}', name: 'app_detaille')]
+    #[Route('/afficherjeux/detaille/{id}', name: 'app_detaille')]
     public function detaille(int $id, ActucRepository $actucRepository , ActualiteimageRepository $actualiteimageRepository ): Response
     {
+
+       // dump($id);
         $detaille1 = $actucRepository->find($id);
         // $detaille1 = $this->getDoctrine()->getRepository(Actuc::class)->find($id);
+ 
+      //dd($detaille1);
+
 
         if (!$detaille1) {
             throw $this->createNotFoundException('Jeu non trouvé');

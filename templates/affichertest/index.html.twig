@@ -91,7 +91,18 @@
     {% endfor %}
 
   
-  
+  <!-- Pagination -->
+<div class="pagination">
+    {% if page > 1 %}
+        <a href="{{ path('app_affichertest', { 'page': page - 1 }) }}" class="btn3">Précédent</a>
+    {% endif %}
+
+    <span>Page {{ page }} sur {{ totalPages }}</span>
+
+    {% if page < totalPages %}
+        <a href="{{ path('app_affichertest', { 'page': page + 1 }) }}" class="btn2">Suivant</a>
+    {% endif %}
+</div>
  </div>
      
   <hr>

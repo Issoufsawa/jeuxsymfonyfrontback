@@ -7,7 +7,7 @@ app_detaille:
     controller: App\Controller\DetailleController::detaille
 
    
-   
+      
    
 app_detaille1:
     path: /detailleactualite/{id}
