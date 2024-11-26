@@ -20,7 +20,7 @@ class DetailleactualiteController extends AbstractController
         if (!$detailleactualite) {
             throw $this->createNotFoundException('Jeu non trouvé');
         }
-        $jeux = $actualiteimageRepository->findAll(); // Cette méthode récupère tous les jeux de la table
+        $jeux = $actualiteimageRepository->findLastThree(); // Cette méthode récupère tous les jeux de la table
         return $this->render('detailleactualite/index.html.twig', [
             'controller_name' => 'DetailleactualiteController',
             'detailleactualite' => $detailleactualite,

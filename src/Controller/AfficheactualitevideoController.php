@@ -9,16 +9,43 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\ORM\Tools\Pagination\Paginator;
+
 
 class AfficheactualitevideoController extends AbstractController
 {
     #[Route('/afficheactualitevideo', name: 'app_afficheactualitevideo')]
-    public function index(actualitevideoRepository $ActualitevideoRepository): Response
+    public function index(actualitevideoRepository $ActualitevideoRepository , Request $request, EntityManagerInterface $entityManager): Response
     {
-        $allactualitevideo = $ActualitevideoRepository->findAll(); // Cette méthode récupère tous les jeux de la table
+
+
+  // Récupérer le numéro de la page de la requête, par défaut page 1
+ $page = max(1, $request->query->getInt('page', 1));
+ $limit = 3; // Nombre de jeux à afficher par page
+
+ // Requête paginée
+ $query = $entityManager->createQuery(
+     'SELECT j FROM App\Entity\Actualitevideo  j ORDER BY j.createAd DESC'
+ )
+ ->setFirstResult(($page - 1) * $limit)  // Calculer l'offset
+ ->setMaxResults($limit);                // Limiter le nombre de résultats
+
+ // Pagination
+ $paginator = new Paginator($query, true);
+ $totalGames = count($paginator);  // Nombre total de jeux
+ $totalPages = ceil($totalGames / $limit);  // Calculer le nombre total de pages
+
+
+
+
+
+        // $allactualitevideo = $ActualitevideoRepository->findAll(); // Cette méthode récupère tous les jeux de la table
         return $this->render('afficheactualitevideo/index.html.twig', [
             'controller_name' => 'AfficheactualitevideoController',
-            'allactualitevideo' => $allactualitevideo,  
+            // 'allactualitevideo' => $allactualitevideo,  
+            'allactualitevideo' => $paginator,
+            'page' => $page,
+            'totalPages' => $totalPages,
         ]);
     }
 

@@ -43,7 +43,7 @@
   }
 
 
-  @media (max-width: 768px) {
+  @media (max-width: 576px) {
     main.body  {
       margin-left: 0 !important;
       margin-right: 0 !important;

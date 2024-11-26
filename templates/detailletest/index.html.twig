@@ -58,7 +58,7 @@
                             <li class="nav-item"><a class="nav-link" href="{{ path('app_affichervideo') }}">Multimédia</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ path('app_afficherbonplan') }}">Bons plans</a></li>
                             <li class="nav-item">
-                                 <a href="{{ path('app_appointement') }}" class="btn btn-primary">Make an Appointment</a>
+                                 <a href="{{ path('app_appointement') }}" class="btn btn-primary">Prendre un rendez-vous</a>
                             </li>
                         </ul>
                     </div>
@@ -71,7 +71,7 @@
 <div >
 <h1>Detaille Test  </h1>
  
-<div class="row row-cols-1 row-cols-md-4 g-4">
+<div class="row row-cols-1 row-cols-md-4 g-4" id="ol4">
      <div class="banniere">
   <div class="overlay1" id="img">
     <img src="{{ asset('uploads/images/' ~ detailletest.imagePath) }}" alt="{{ detailletest.titre }}"> 
@@ -83,7 +83,7 @@
     <h1>{{ detailletest.description }}</h1>
  <hr>
      <h1> Last NEW </h1> 
-    <div class="row row-cols-1 row-cols-md-4 g-4">
+    <div class="row row-cols-1 row-cols-md-4 g-4" id="col4">
     {% for jeu in jeux %}
         <div class="col" id="col1">
              <a href="{{ path('app_detailleactualite', { 'id': jeu.id }) }}">  
@@ -101,10 +101,22 @@
     {% endfor %}
   
  </div>
-  <hr>
+
   </div>
 </main>
 
+<footer class="section bg-light py-3" id="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="mb-0 fs-6">
+                   Copyright &copy; 2024 Jeux-video.ci. Tous droits réservés.
+                </p>
+                <small class="d-block">Développé par GROUPE CIMEF.</small>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 
 </html>

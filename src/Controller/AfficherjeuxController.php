@@ -17,14 +17,14 @@ class AfficherjeuxController extends AbstractController
     public function index(actucRepository $actucRepository , Request $request, EntityManagerInterface $entityManager): Response
     {
 
-
+        
  // Récupérer le numéro de la page de la requête, par défaut page 1
  $page = max(1, $request->query->getInt('page', 1));
  $limit = 3; // Nombre de jeux à afficher par page
 
  // Requête paginée
  $query = $entityManager->createQuery(
-     'SELECT j FROM App\Entity\Actualiteimage  j ORDER BY j.createAd DESC'
+     'SELECT j FROM App\Entity\Actuc  j ORDER BY j.createAd DESC'
  )
  ->setFirstResult(($page - 1) * $limit)  // Calculer l'offset
  ->setMaxResults($limit);                // Limiter le nombre de résultats
@@ -35,13 +35,15 @@ class AfficherjeuxController extends AbstractController
  $totalPages = ceil($totalGames / $limit);  // Calculer le nombre total de pages
 
 
-
-        $jeux = $actucRepository->findAll(); // Cette méthode récupère tous les jeux de la table
+        // $jeux = $actucRepository->findAll(); // Cette méthode récupère tous les jeux de la table
         return $this->render('afficherjeux/index.html.twig', [
             'controller_name' => 'AfficherjeuxController',
+            // 'jeux' => $jeux, // Passe la liste des jeux à la vue
+
             'jeux' => $paginator,
             'page' => $page,
             'totalPages' => $totalPages,
+
         ]);
     }
 }

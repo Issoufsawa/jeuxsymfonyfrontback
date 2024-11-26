@@ -57,7 +57,7 @@
                             <li class="nav-item"><a class="nav-link" href="{{ path('app_affichervideo') }}">Multimédia</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ path('app_afficherbonplan') }}">Bons plans</a></li>
                             <li class="nav-item">
-                                 <a href="{{ path('app_appointement') }}" class="btn btn-primary">Make an Appointment</a>
+                                 <a href="{{ path('app_appointement') }}" class="btn btn-primary">Prendre un rendez-vous</a>
                             </li>
                         </ul>
                     </div>
@@ -90,13 +90,38 @@
         <p>Aucun jeu trouvé.</p>
     {% endfor %}
 
-  
+  <div class="col" id="col3">
+    {% if page > 1 %}
+        <a href="{{ path('app_afficherbonplan', {'page': page - 1}) }}" class="btn3">Précédent</a>
+    {% endif %}
+
+    <span>Page {{ page }} sur {{ totalPages }}</span>
+
+    {% if page < totalPages %}
+        <a href="{{ path('app_afficherbonplan', {'page': page + 1}) }}" class="btn2">Suivant</a>
+    {% endif %}
+</div>
+
+</div>
   
  </div>
      
-  <hr>
+
   </div>
 </main>
+
+<footer class="section bg-light py-3" id="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="mb-0 fs-6">
+                   Copyright &copy; 2024 Jeux-video.ci. Tous droits réservés.
+                </p>
+                <small class="d-block">Développé par GROUPE CIMEF.</small>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 
 </html>

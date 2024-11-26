@@ -220,6 +220,8 @@ font-size: 10px;
 
 .act{
   margin-bottom: 2px;
+  color: rgb(52, 45, 240);
+  
 }
 .act1{
   margin-bottom: 2px;
@@ -279,7 +281,7 @@ font-size: 10px;
    
   .col{
     margin-left:  95px !important;
-    margin-bottom: 25px !important;
+    margin-bottom: 40px !important;
 
 }
 
@@ -327,7 +329,9 @@ width: 90px!important;
  /* padding-right: 150px !important; */
  padding-left: 0 !important;
     padding-right: 0 !important;
-    
+
+   
+  
    
    
 
@@ -341,9 +345,18 @@ width: 90px!important;
 
 }
 
+#contact {
+  background-image: url('/images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
 .contact{
  display: flex;
  margin-left: 200px;
+
 
 }
 h2{
@@ -354,6 +367,8 @@ h2{
 
 #col1{
   margin-left: 54px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 #rendez{
@@ -367,6 +382,7 @@ h2{
 
 #col2{
   padding-left: 40px;
+  margin-bottom: 250px;
 }
 
 
@@ -430,7 +446,18 @@ html, body {
 
 
 #col3{
-  margin-left: 900px;
+  margin-left: 850px;
   margin-bottom: 250px ;
+  margin-top: 50px;
    
  }
+
+ #col4{
+  margin-bottom: 200px;
+
+ }
+
+#h1{
+  margin-top: 50px;
+ }
+
