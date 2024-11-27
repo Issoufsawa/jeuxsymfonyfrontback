@@ -1,4 +1,4 @@
-* {box-sizing: border-box;}
+/* * {box-sizing: border-box;} */
 
 body { 
   margin: 0;
@@ -6,12 +6,18 @@ body {
   background-color: rgb(208, 205, 205);
 }
 
-.header {
+/* .header {
   overflow: hidden;
   background-color: #f1f1f1;
   padding: 8px 10px;
-}
+} */
 
+
+#card:hover{
+ transform: scale(1.1);
+ transition: 0.3s ease;
+ border-style: none;
+  }
 .custom-icon {
     color: rgb(72, 163, 224) ;
   }
@@ -65,7 +71,7 @@ color:rgb(72, 163, 224);
   padding-left: 200px; 
 }
 .body{
-    background-color: #f1f1f1;
+    background-color: #79a4cb;
     display: flex;
      margin-left: 200px;
      margin-right: 200px;
@@ -75,20 +81,37 @@ color:rgb(72, 163, 224);
 .col{
     margin-left: 20px; 
     margin-bottom: 30px; 
+    border-color: #2e4255;
+    border-radius: 2px;
     /* margin-right: 0px; */
 
     
 
 }
+
+.h1{
+  font-size: 15px;
+  margin-left: 300px;
+  margin-top: 50px;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin-bottom: 40px;
+  font-family: sans-serif;
+  
+}
 h1{
     font-size: 15px;
-    margin-left: 30px;
+    margin-left: 360px;
     margin-top: 30px;
     font-weight: bold;
+    color: #FFFFFF;
+    font-family: sans-serif;
+    
 }
 .card-text{
     color: #FFFFFF;
     font-size: small;
+    font-family: sans-serif;
   
 }
 
@@ -97,11 +120,19 @@ h1{
     margin-left: 2px;
     display: flex;
     
+    
 }
 .card1{
     padding-left: 25px;
 
 }
+
+
+#ver:hover{
+  transform: scale(1.1);
+  transition: 0.3s ease;
+  border-style: none;
+   }
 /* @media screen and (max-width: 496px) {
   .header a {
     float: none;
@@ -129,6 +160,7 @@ h1{
      left: 0px;
      text-align: center;
      border-radius: 3px;
+     font-family: sans-serif;
      
      
 }
@@ -145,6 +177,7 @@ h1{
   background-color: #ededed;
   font-size: 12px;
   font-weight: bold;
+  font-family: sans-serif;
 }
 
 .btn3{
@@ -184,8 +217,9 @@ font-size: 10px;
   font-size: 10px;
 }
 .card{
-  background-color: #ada9a93b;
- 
+  background-color: #FFFFFF;
+  border-style: none;
+  font-family: sans-serif;
 
   
 }
@@ -194,13 +228,18 @@ font-size: 10px;
    height: 450px;
 }
 
+#Tendance{
+  margin-bottom: 40px;
+}
+
 .fil-actualité{
   background-color: black;
   color: #FFFFFF;
-  padding-left: 10px;
+  padding-left: 105px;
   padding-top: 7px;
   padding-bottom: 7px;
   font-weight: bold;
+  font-family: sans-serif;
 }
 
 #fil-actualité{
@@ -234,7 +273,10 @@ font-size: 10px;
  font-weight: bold;
 }
 
-
+#uni1{
+  color: #FFFFFF;
+  font-family: sans-serif;
+}
 
 
 
@@ -245,6 +287,7 @@ font-size: 10px;
 .header-left a, .header-right a {
   font-size: 14px;
   text-decoration: none;
+  color: #FFFFFF;
 }
 
 .header-left {
@@ -377,7 +420,9 @@ h2{
 
 
 
-
+#fo{
+  background-color: aquamarine;
+}
 
 
 #col2{
@@ -388,15 +433,9 @@ h2{
 
 
 
-#footer {
-  width: 100%; /* Le footer doit toujours prendre toute la largeur */
-  background-color: #f8f9fa; /* Couleur de fond pour la visibilité */
-  text-align: center; /* Centrer le contenu */
-}
-
 #footer p, #footer small {
   font-size: 14px; /* Ajustez la taille pour les petits écrans */
-  margin: 0; /* Évitez les marges supplémentaires */
+
 }
 
 
@@ -404,6 +443,7 @@ h2{
 @media (max-width: 768px) { /* Pour les tablettes et téléphones */
   #footer p, #footer small {
       font-size: 12px; /* Réduire légèrement la taille du texte */
+   
   }
 }
 
@@ -422,9 +462,6 @@ html, body {
   flex: 1; /* Le contenu principal occupe tout l'espace disponible */
 }
 
-#footer {
-  flex-shrink: 0; /* Le footer reste visible en bas */
-}
 
 
 .pagination{
@@ -461,3 +498,12 @@ html, body {
   margin-top: 50px;
  }
 
+#pro{
+  margin-bottom: 100px;
+}
+
+.container-fluid{
+  background-color: #2e4255;
+  color: #FFFFFF;
+  font-family: sans-serif;
+}

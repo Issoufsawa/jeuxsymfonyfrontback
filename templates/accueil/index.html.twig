@@ -9,10 +9,10 @@
 <link rel="stylesheet" href={{ asset("assets/img/jeux.jpg") }}>
 </head>
 <body>
-<header class="section fixed-top bg-light">
-    <div class="container-fluid">
+<header class="section fixed-top bg-light" >
+    <div class="container-fluid" style="background-color: #2e4255;">
         <div class="row align-items-center py-3">
-        <nav class="navbar navbar-expand-md navbar-light p-0">
+        <nav class="navbar navbar-expand-md navbar-light  p-0">
                     
                     <div class="collapse navbar-collapse" id="navbarMenu1">
             <div class="col-12 col-md-6 d-flex flex-wrap header-left">
@@ -30,9 +30,9 @@
         </div>
         </div>
         </nav>
-        <div class="row align-items-center py-3"   >
+        <div class="row align-items-center py-3">
             <div class="col-12 col-md-6" >
-                <a href="{{ path('app_afficheractualite')}}" class="logo h4 text-decoration-none"  style = " margin-left: 150px" >Jeux-video.ci</a>
+                <a href="{{ path('app_afficheractualite')}}" class="logo h4 text-decoration-none"  style=" margin-left: 150px  ; color :  #FFFFFF" ><span class="bg-primary bg-gradient p-1 rounded-3 text-light">Jeux-</span>video.ci</a>
             </div>
             <div class="col-12 col-md-6 text-md-end"  >
                 <nav class="navbar navbar-expand-md navbar-light p-0">
@@ -40,10 +40,10 @@
                         aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarMenu" style = " margin-right: 100px"  >
-                        <ul class="navbar-nav ms-auto">
+                    <div class="collapse navbar-collapse" id="navbarMenu" style = " margin-right: 100px ;color :  #FFFFFF"  >
+                        <ul class="navbar-nav ms-auto" >
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="actusDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="#" id="actusDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"  style = " color :  #FFFFFF">
                                     Actus
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="actusDropdown">
@@ -51,13 +51,13 @@
                                     <li><a class="dropdown-item" href="{{ path('app_afficheactualiteimage') }}">Articles</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="{{ path('app_afficherjeux') }}">Jeux</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ path('app_affichertest') }}">Tests</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ path('app_apercu') }}">Apercus</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ path('app_affichervideo') }}">Multimédia</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ path('app_afficherbonplan') }}">Bons plans</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ path('app_afficherjeux') }}"  style = " color :  #FFFFFF">Jeux</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ path('app_affichertest') }}"  style = " color :  #FFFFFF">Tests</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ path('app_apercu') }}"  style = " color :  #FFFFFF">Apercus</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ path('app_affichervideo') }}"  style = " color :  #FFFFFF">Multimédia</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ path('app_afficherbonplan') }}"  style = " color :  #FFFFFF">Bons plans</a></li>
                             <li class="nav-item">
-                                <a href="{{ path('app_appointement') }}" class="btn btn-primary">Prendre un rendez-vous</a>
+                                <a href="{{ path('app_appointement') }}" class="btn btn-primary"  style = " color :  #FFFFFF">Prendre un rendez-vous</a>
                             </li>
                         </ul>
                     </div>
@@ -68,7 +68,7 @@
 </header>
 <main  class="body">
 <div >
-<h1>Suivre jeuxvideo.com/Toute l'actu de la Xbox Series X et S et ses jeux </h1>
+<h1 class="h1">Suivre jeuxvideo.com/Toute l'actu de la Xbox Series X et S et ses jeux </h1>
 <hr> 
 <div class="row row-cols-1 row-cols-md-4 g-5">
 
@@ -76,11 +76,11 @@
      
         <div class="col" id="col1">
             <a href="{{ path('app_detaille', { 'id': jeu.id }) }}">  
-            <div class="card" style="width: 300px">
+            <div class="card" style="width: 300px" id="card">
                 <img   src="{{ asset('uploads/images/' ~ jeu.imagePath) }}"class="card-img-top" alt="{{ jeu.titre }}" style="width:100%">
                 <div class="card-img-overlay">
                     <button href="#" class="btn1">NEW JEU</button>
-                    <p id="uni" class="card-text">{{ jeu.description|slice(0, 100) }} du :{{jeu.createAd|date('d/m/Y H:i') }}</p>
+                    <p id="uni" class="card-text">{{ jeu.description|slice(0, 100)}} ... du :{{jeu.createAd|date('d/m/Y H:i') }}</p>
                 </div>
                 </div>
                </a>
@@ -91,16 +91,16 @@
 
  </div>    
   <hr>
-  <h1>Tendance</h1>
-  <section  class="my-2" >
+  <h1 id="Tendance">Tendance</h1>
+  <section  class="my-3" >
        
     <div class="container">
         <div id="con" class="row gy-4 ">
     
-           <div class="col-12 col-md-4" >
+           <div class="col-12 col-md-4" id="card" >
              {% for jeu4 in jeux4 %}
              <a href="{{ path('app_detaille', { 'id': jeu4.id }) }}">  
-                <div  id = "ten" class="card">
+                <div  id = "ten" class="card" >
                     <img src="{{ asset('uploads/images/' ~ jeu4.imagePath) }}"class="card-img-top" alt="{{ jeu4.titre }}" style="width:100% ;height: 225px;"  >
                             <div class="card-img-overlay">
                               <button href="#" class="btn1">NEW JEU</button>              
@@ -108,7 +108,7 @@
                               <div class="card-body">
                                 <p class="card-title">{{ jeu4.titre }} : (PS5,Xbox Series,Switch,PS4,Xbox <br> One,PC)</p>
                                 <p class="act1">{{ jeu4.createAd|date('d/m/Y') }}</p>
-                                <p class="card-text">{{ jeu4.description|slice(0, 100) }}</p>
+                                <p class="card-text">{{ jeu4.description|slice(0, 100) }} ...</p>
                                 <button href="#" class="btn2">PC</button>
                                 <button href="#" class="btn3">XBOX SERIES</button>
                                 <button href="#" class="btn4">SWITCH</button>
@@ -121,13 +121,13 @@
          <div class="card mb-3" style="max-width: 550px; margin-top: 7px;" >
          <a href="{{ path('app_detaille', { 'id': jeu4.id }) }}">  
           <div class="row g-0" >
-                <div class="col-4" >
+                <div class="col-4" id="card" >
                   <img src="{{ asset('uploads/images/' ~ jeu4.imagePath) }}" class="card-img-top" alt="{{ jeu4.titre }}" style="width: 100%; height: 100px; object-fit: cover;">
                 </div>
                       <div class="col-md-8" style="width: 130px;">
                         <div class="card-body">
                           <p   class="text">
-                            <span class="new">News Jeu :</span> {{ jeu4.titre }} : {{ jeu4.description|slice(0, 100) }}
+                            <span class="new">News Jeu :</span> {{ jeu4.titre }} : {{ jeu4.description|slice(0, 100) }} ...
                             <span class="date d-block">{{jeu4.createAd|date('d/m/Y H:i') }}</span>
                           </p>
                             </div>
@@ -152,7 +152,7 @@
               <div class="col-md-8" style="width: 130px;">
                 <div class="card-body" >
                   <p  class="text">
-                   <span class="new">News Jeu :</span> {{ jeu5.titre }}  :{{ jeu5.description|slice(0, 100) }}
+                   <span class="new">News Jeu :</span> {{ jeu5.titre }}  :{{ jeu5.description|slice(0, 100) }}...
                    <span class="date">{{jeu5.createAd|date('d/m/Y H:i') }}</span>
                   </p>
                 </div>
@@ -166,11 +166,11 @@
                 </div>
 
            <div class="col-12 col-md-4">
-          <div class="card">
+          <div class="card" id="card">
             <span class="fil-actualité">Fil d'actualité</span>
             <div id="fil-actualité" class="card-body"  >
             {% for actualiteimage1 in actualiteimage %}
-          <p class="act">{{ actualiteimage1.createAd|date('d/m/Y H:i') }}- NEWS - {{ actualiteimage1.titre }} : {{ actualiteimage1.description|slice(0, 100) }}</p>
+          <p class="act"> <span class="new"> NEWS </span> - du {{ actualiteimage1.createAd|date('d/m/Y') }} {{ actualiteimage1.titre }} : {{ actualiteimage1.description|slice(0, 100) }}...</p>
         {% endfor %}            
             </div>
           </div>
@@ -180,13 +180,13 @@
 
   <hr>
       <h1> Promos et bons plans Xbox Series</h1>
-      <section id="issoufsawa" class="my-2">
-        <div class="container">
+      <section  class="my-2">
+        <div class="container" id="pro">
         
           <div class="row gy-4 align-items-center">
 
           {% for vi in video %}
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4" id="card">
                {% if vi.videoPath %}
                 <video   style="width:100% ;height: 300px;" controls>
                     <source src="{{ asset('uploads/videos/' ~ vi.videoPath) }}" type="video/mp4">
@@ -195,7 +195,7 @@
             {% else %}
                 <p>Aucune vidéo disponible.</p>
             {% endif %}
-            <p id="uni1" class="card-text">{{ vi.description|slice(0, 100) }} du:{{vi.createAd|date('d/m/Y') }} </p>
+            <p id="uni1" class="card-text">{{ vi.description|slice(0, 100) }} ... du:{{vi.createAd|date('d/m/Y') }} </p>
             </div>
             {% else %}
             <p>Aucune vidéo trouvée.</p>
@@ -204,7 +204,7 @@
             <div class="col-12 col-md-4">
              {% for jeu2 in jeux2 %}
               <a href="{{ path('app_detaille', { 'id': jeu2.id }) }}">  
-              <div class="card mb-3" style="max-width: 550px; " >
+              <div class="card mb-3" style="max-width: 550px; " id="card" >
                 <div class="row g-0" >
                   <div class="col-4">
                     <img src="{{ asset('uploads/images/' ~ jeu2.imagePath) }}"class="card-img-top" alt="{{ jeu2.titre }}" style="width: 100%; height: 100px; object-fit: cover;">
@@ -212,7 +212,7 @@
                   <div class="col-md-8" style="width: 130px;">
                     <div class="card-body">
                       <p class="text">
-                       <span class="new">News Jeu :</span>  {{ jeu2.titre }}  :{{ jeu2.description|slice(0, 100) }}
+                       <span class="new">News Jeu :</span>  {{ jeu2.titre }}  :{{ jeu2.description|slice(0, 100) }} ...
                        <span class="date">{{jeu2.createAd|date('d/m/Y H:i') }}</span>
                       </p>
                     </div>
@@ -231,8 +231,9 @@
       </section>
     </div>
 </main>
-<footer class="section bg-light py-3" id="footer">
-    <div class="container-fluid">
+
+<footer >
+    <div class="container-fluid  py-4 ">
         <div class="row">
             <div class="col-12 text-center">
                 <p class="mb-0 fs-6">
@@ -243,6 +244,7 @@
         </div>
     </div>
 </footer>
+
 </body>
 </html>
 
