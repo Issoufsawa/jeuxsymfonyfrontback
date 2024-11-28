@@ -387,12 +387,12 @@ width: 90px!important;
 
 }
 
-#contact {
+/* #contact {
   background-image: url('/images/background.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
+} */
 
 
 .contact{
@@ -545,11 +545,10 @@ html, body {
   }
 
 
-  /* .bi:hover{
-    color: #0c0c0c;
-    
+  .me-3:hover{
+    transform: scale(1.15);
   }
-    */
+   
 
 /* .bi{
   color: #010101;
@@ -619,4 +618,75 @@ html, body {
 #bonplan {
  width:980px ; 
  height : 250px;
+}
+
+
+.custom-icon {
+  font-size: 20px; /* Taille des icônes */
+  transition: color 0.3s ease; /* Effet de transition pour un hover */
+}
+
+.custom-icon:hover {
+  color: #007bff; /* Couleur au survol (par exemple, bleu) */
+}
+
+.bi-twitter {
+  color: #1DA1F2; /* Bleu Twitter */
+}
+
+.bi-facebook {
+  color: #1877F2; /* Bleu Facebook */
+  background-color: #ffffff; /* Fond blanc */
+  border-radius: 75%; /* Pour rendre le fond circulaire */
+  padding: 0; /* Espacement à l'intérieur de l'icône */
+  font-size: 20px; /* Taille de l'icône */
+  transition: transform 0.3s ease; /* Animation douce */
+}
+
+.bi-facebook:hover {
+  transform: scale(1.1); /* Agrandit légèrement l'icône au survol */
+}
+
+.bi-instagram {
+  color: #C13584; /* Dégradé Instagram */
+}
+
+.bi-skype {
+  color: #00AFF0; /* Bleu Skype */
+}
+
+.bi-linkedin {
+  color: #0A66C2; /* Bleu LinkedIn */
+  background-color: #ffffff; /* Fond blanc */
+  border-radius: 15%; /* Pour rendre le fond circulaire */
+  padding: 0; /* Espacement à l'intérieur de l'icône */
+  font-size: 20px; /* Taille de l'icône */
+  transition: transform 0.3s ease; /* Animation douce */
+}
+
+#lien{
+
+  color: #FFFFFF;
+}
+
+#lien1{
+
+  color: #060606;
+}
+#lien1:hover{
+  color: rgb(15, 102, 178);
+
+}
+
+#lien:hover{
+  color: rgb(15, 102, 178);
+
+}
+#video{
+  margin-left:150px ;
+  color: #FFFFFF;
+}
+
+#video:hover{
+ color: #111111;
 }

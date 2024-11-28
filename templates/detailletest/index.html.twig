@@ -33,7 +33,7 @@
         </nav>
         <div class="row align-items-center py-3">
             <div class="col-12 col-md-6" >
-                <a href="{{ path('app_afficheractualite')}}" class="logo h4 text-decoration-none"  style=" margin-left: 150px  ; color :  #FFFFFF" ><span class="bg-primary bg-gradient p-1 rounded-3 text-light">Jeux-</span>video.ci</a>
+                <a href="{{ path('app_afficheractualite')}}" class="logo h4 text-decoration-none"  id="video" ><span class="bg-primary bg-gradient p-1 rounded-3 text-light">Jeux-</span>video.ci</a>
             </div>
             <div class="col-12 col-md-6 text-md-end"  >
                 <nav class="navbar navbar-expand-md navbar-light p-0">
@@ -48,15 +48,15 @@
                                     Actus
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="actusDropdown">
-                                    <li><a class="dropdown-item" href="{{ path('app_afficheactualitevideo') }}">Vidéos</a></li>
-                                    <li><a class="dropdown-item" href="{{ path('app_afficheactualiteimage') }}">Articles</a></li>
+                                    <li><a class="dropdown-item" href="{{ path('app_afficheactualitevideo') }}"  id="lien1">Vidéos</a></li>
+                                    <li><a class="dropdown-item" href="{{ path('app_afficheactualiteimage') }}"  id="lien1">Articles</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="{{ path('app_afficherjeux') }}"  style = " color :  #FFFFFF">Jeux</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ path('app_affichertest') }}"  style = " color :  #FFFFFF">Tests</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ path('app_apercu') }}"  style = " color :  #FFFFFF">Apercus</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ path('app_affichervideo') }}"  style = " color :  #FFFFFF">Multimédia</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ path('app_afficherbonplan') }}"  style = " color :  #FFFFFF">Bons plans</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ path('app_afficherjeux') }}"  id="lien">Jeux</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ path('app_affichertest') }}"  id="lien">Tests</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ path('app_apercu') }}"  id="lien">Apercus</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ path('app_affichervideo') }}"  id="lien">Multimédia</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ path('app_afficherbonplan') }}" id="lien">Bons plans</a></li>
                             <li class="nav-item">
                                 <a href="{{ path('app_appointement') }}" class="btn btn-primary"  style = " color :  #FFFFFF">Prendre un rendez-vous</a>
                             </li>

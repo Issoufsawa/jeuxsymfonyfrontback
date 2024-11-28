@@ -9,10 +9,10 @@
 <link rel="stylesheet" href={{ asset("assets/img/jeux.jpg") }}>
 </head>
 <body>
-<header class="section fixed-top bg-light">
-    <div class="container-fluid">
+<header class="section fixed-top bg-light" >
+    <div class="container-fluid" style="background-color: #2e4255;">
         <div class="row align-items-center py-3">
-        <nav class="navbar navbar-expand-md navbar-light p-0">
+        <nav class="navbar navbar-expand-md navbar-light  p-0">
                     
                     <div class="collapse navbar-collapse" id="navbarMenu1">
             <div class="col-12 col-md-6 d-flex flex-wrap header-left">
@@ -30,9 +30,9 @@
         </div>
         </div>
         </nav>
-        <div class="row align-items-center py-3"   >
+        <div class="row align-items-center py-3">
             <div class="col-12 col-md-6" >
-                <a href="{{ path('app_afficheractualite')}}" class="logo h4 text-decoration-none"  style = " margin-left: 150px" >Jeux-video.ci</a>
+                <a href="{{ path('app_afficheractualite')}}" class="logo h4 text-decoration-none" id="video"><span class="bg-primary bg-gradient p-1 rounded-3 text-light">Jeux-</span>video.ci</a>
             </div>
             <div class="col-12 col-md-6 text-md-end"  >
                 <nav class="navbar navbar-expand-md navbar-light p-0">
@@ -40,24 +40,24 @@
                         aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarMenu" style = " margin-right: 100px"  >
-                        <ul class="navbar-nav ms-auto">
+                    <div class="collapse navbar-collapse" id="navbarMenu" style = " margin-right: 100px ;color :  #FFFFFF" >
+                        <ul class="navbar-nav ms-auto" >
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="actusDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="#" id="actusDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"  style = " color :  #FFFFFF">
                                     Actus
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="actusDropdown">
-                                    <li><a class="dropdown-item" href="{{ path('app_afficheactualitevideo') }}">Vidéos</a></li>
-                                    <li><a class="dropdown-item" href="{{ path('app_afficheactualiteimage') }}">Articles</a></li>
+                                    <li><a class="dropdown-item" href="{{ path('app_afficheactualitevideo') }}"  id="lien1">Vidéos</a></li>
+                                    <li><a class="dropdown-item" href="{{ path('app_afficheactualiteimage') }}"  id="lien1">Articles</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="{{ path('app_afficherjeux') }}">Jeux</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ path('app_affichertest') }}">Tests</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ path('app_apercu') }}">Apercus</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ path('app_affichervideo') }}">Multimédia</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ path('app_afficherbonplan') }}">Bons plans</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ path('app_afficherjeux') }}"  id="lien">Jeux</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ path('app_affichertest') }}"  id="lien">Tests</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ path('app_apercu') }}"  id="lien">Apercus</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ path('app_affichervideo') }}"  id="lien">Multimédia</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ path('app_afficherbonplan') }}" id="lien">Bons plans</a></li>
                             <li class="nav-item">
-                               <a href="{{ path('app_appointement') }}" class="btn btn-primary">Prendre un rendez-vous</a>
+                                <a href="{{ path('app_appointement') }}" class="btn btn-primary"  style = " color :  #FFFFFF">Prendre un rendez-vous</a>
                             </li>
                         </ul>
                     </div>
@@ -66,8 +66,6 @@
         </div>
     </div>
 </header>
-
-
 
 <main  class="body">
    
@@ -125,8 +123,8 @@
 </main>
 
 
-<footer class="section bg-light py-3" id="footer">
-    <div class="container-fluid">
+<footer >
+    <div class="container-fluid  py-4 ">
         <div class="row">
             <div class="col-12 text-center">
                 <p class="mb-0 fs-6">
