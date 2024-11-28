@@ -75,7 +75,7 @@ color:rgb(72, 163, 224);
     display: flex;
      margin-left: 200px;
      margin-right: 200px;
-     margin-top: 120px ;
+     margin-top: 100px ;
 }
 
 .col{
@@ -92,7 +92,7 @@ color:rgb(72, 163, 224);
 .h1{
   font-size: 15px;
   margin-left: 300px;
-  margin-top: 50px;
+  margin-top: 70px;
   font-weight: bold;
   color: #FFFFFF;
   margin-bottom: 40px;
@@ -338,10 +338,9 @@ font-size: 10px;
    
   display: flex !important;
   flex-direction: column !important;
-
   width: 100px!important;
   height: 360px!important;
-margin-bottom: 15px  !important;
+  margin-bottom: 15px  !important;
 
 }
 
@@ -410,7 +409,7 @@ h2{
 
 #col1{
   margin-left: 54px;
-  margin-top: 40px;
+  margin-top: 60px;
   margin-bottom: 40px;
 }
 
@@ -506,4 +505,118 @@ html, body {
   background-color: #2e4255;
   color: #FFFFFF;
   font-family: sans-serif;
+}
+
+
+.det{
+  margin-left: 200px;
+}
+
+.det1{
+  margin-left: 200px;
+  font-weight: bold;
+  font-size: 50px;
+}
+.art{
+  margin-left: 200px;
+  margin-top: 20px;
+  color: #FFFFFF;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.la{
+  margin-left: 200px;
+  margin-bottom: 20px;
+}
+
+.btn9{
+  border-color: #FFFFFF;
+   background-color: #79a4cb;
+   border-style: solid;
+   border-width: 0.5px;
+}
+
+.btn9:hover{
+
+   background-color: #f3f3f3;
+  
+
+  }
+
+
+  /* .bi:hover{
+    color: #0c0c0c;
+    
+  }
+    */
+
+/* .bi{
+  color: #010101;
+  font-weight: lighter;
+} */
+
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Deux colonnes de taille égale */
+  grid-template-rows: auto auto; /* Deux rangées automatiques */
+  gap: 20px; /* Espacement entre les éléments */
+  margin-left: 60px;
+  margin-top: 40px;
+  
+}
+
+.first-col {
+
+  grid-column: 1; /* Place le premier élément dans la première colonne */
+  grid-row: 1; /* Première rangée */
+  margin-right: 10px;
+}
+
+.second-col {
+  grid-column: 2; /* Place le deuxième élément dans la deuxième colonne */
+  grid-row: 1; /* Première rangée */
+}
+
+.third-col {
+  grid-column: 1 / span 2; /* S'étend sur deux colonnes */
+  grid-row: 2; /* Deuxième rangée */
+}
+
+
+#uni2{
+  position: absolute;
+    margin-top:200px;
+     background-color: black;
+     color: #FFFFFF !important; 
+     width: 450px;
+     height: auto;
+     left: 0px;
+     text-align: center;
+     border-radius: 3px;
+     font-family: sans-serif;
+     
+     
+}
+
+#uni21{
+  position: absolute;
+    margin-top:200px;
+     background-color: black;
+     color: #FFFFFF !important; 
+     width: 950px;
+     height: auto;
+     left: 0px;
+     text-align: center;
+     border-radius: 3px;
+     font-family: sans-serif;
+     
+     
+}
+
+
+#bonplan {
+ width:980px ; 
+ height : 250px;
 }

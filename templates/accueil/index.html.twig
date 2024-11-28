@@ -140,6 +140,7 @@
                       {% endfor %}
 
                           </div>
+                        
       
             <div class="col-12 col-md-4"  id="ver1">
             {% for jeu5 in jeux5 %}
@@ -164,13 +165,13 @@
             <p>Aucun jeu trouvé.</p>
                 {% endfor %}
                 </div>
-
+            
            <div class="col-12 col-md-4">
-          <div class="card" id="card">
+          <div class="card">
             <span class="fil-actualité">Fil d'actualité</span>
             <div id="fil-actualité" class="card-body"  >
             {% for actualiteimage1 in actualiteimage %}
-          <p class="act"> <span class="new"> NEWS </span> - du {{ actualiteimage1.createAd|date('d/m/Y') }} {{ actualiteimage1.titre }} : {{ actualiteimage1.description|slice(0, 100) }}...</p>
+          <p class="act"  id="card"> <span class="new"> NEWS </span> - du {{ actualiteimage1.createAd|date('d/m/Y') }} {{ actualiteimage1.titre }} : {{ actualiteimage1.description|slice(0, 100) }}...</p>
         {% endfor %}            
             </div>
           </div>
