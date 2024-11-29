@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class AffichervideoController extends AbstractController
 {
-    #[Route('/affichervideo', name: 'app_affichervideo')]
+    #[Route('/video', name: 'app_affichervideo')]
     public function index(videoRepository $videoRepository , Request $request, EntityManagerInterface $entityManager): Response
     {
 

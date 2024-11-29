@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class AfficheactualiteimageController extends AbstractController
 {
-    #[Route('/afficheactualiteimage', name: 'app_afficheactualiteimage')]
+    #[Route('/actualiteimage', name: 'app_afficheactualiteimage')]
     public function index(actualiteimageRepository $ActualiteimageRepository , Request $request, EntityManagerInterface $entityManager): Response
     {
  // Récupérer le numéro de la page de la requête, par défaut page 1

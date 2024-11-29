@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class AfficherjeuxController extends AbstractController
 {
-    #[Route('/afficherjeux', name: 'app_afficherjeux')]
+    #[Route('/jeux', name: 'app_afficherjeux')]
     public function index(actucRepository $actucRepository , Request $request, EntityManagerInterface $entityManager): Response
     {
 

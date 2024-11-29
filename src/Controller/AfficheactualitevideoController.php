@@ -14,7 +14,7 @@ use Doctrine\ORM\Tools\Pagination\Paginator;
 
 class AfficheactualitevideoController extends AbstractController
 {
-    #[Route('/afficheactualitevideo', name: 'app_afficheactualitevideo')]
+    #[Route('/Actualitevideo', name: 'app_afficheactualitevideo')]
     public function index(actualitevideoRepository $ActualitevideoRepository , Request $request, EntityManagerInterface $entityManager): Response
     {
 

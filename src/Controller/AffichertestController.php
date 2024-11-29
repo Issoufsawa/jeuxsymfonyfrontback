@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class AffichertestController extends AbstractController
 {
-    #[Route('/affichertest', name: 'app_affichertest')]
+    #[Route('/test', name: 'app_affichertest')]
     public function index(testRepository $testRepository , Request $request, EntityManagerInterface $entityManager): Response
     {
 

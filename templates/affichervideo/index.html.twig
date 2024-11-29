@@ -74,10 +74,10 @@
 <div class="row row-cols-1 row-cols-md-4 g-4">
 
     {% for vi in video %}
-            <div class="col-12 col-md-4" id="col1">
+            <div class="col-12 col-md-4" id="col1 {{ loop.index == 1 ? 'first-col' : (loop.index == 2 ? 'second-col' : 'third-col') }}">
                {% if vi.videoPath %}
                 <video   style="width:100% ;height: 300px;" controls id="card">
-                    <source src="{{ asset('uploads/videos/' ~ vi.videoPath) }}" type="video/mp4">
+                    <source src="{{ asset('uploads/videos/' ~ vi.videoPath) }}" type="video/mp4" >
                     Votre navigateur ne prend pas en charge la balise vidéo.
                 </video>
             {% else %}
@@ -88,8 +88,6 @@
             {% else %}
             <p>Aucune vidéo trouvée.</p>
             {% endfor %}
-
-
               <div class="col" id="col3">
     {% if page > 1 %}
         <a href="{{ path('app_afficherbonplan', {'page': page - 1}) }}"><button type="button1" class="btn9 btn-outline-primary"><i class="bi bi-arrow-left"></i></button></a>

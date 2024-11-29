@@ -73,8 +73,9 @@
 <div class="row row-cols-1 row-cols-md-4 g-4">
    <div class="game-grid">
     {% for jeu in jeux %}
+    
         <div class="col {{ loop.index == 1 ? 'first-col' : (loop.index == 2 ? 'second-col' : 'third-col') }}">
-            <a href="{{ path('app_detaille', { 'id': jeu.id }) }}">
+            <a href="{{ path('app_detaille',{'id': jeu.id })}}">
                 <div class="card" style="width: 100%;" id="card">
                     <img src="{{ asset('uploads/images/' ~ jeu.imagePath) }}" 
                          class="card-img-top" 

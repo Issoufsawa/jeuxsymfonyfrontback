@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class AfficherbonplanController extends AbstractController
 {
-    #[Route('/afficherbonplan', name: 'app_afficherbonplan')]
+    #[Route('/bonplan', name: 'app_afficherbonplan')]
     public function index(bonplanRepository $bonplanRepository , Request $request, EntityManagerInterface $entityManager): Response
     {
 
