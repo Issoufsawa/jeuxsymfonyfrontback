@@ -76,6 +76,7 @@ color:rgb(72, 163, 224);
      margin-left: 200px;
      margin-right: 200px;
      margin-top: 100px ;
+    
 }
 
 .col{
@@ -90,8 +91,9 @@ color:rgb(72, 163, 224);
 }
 
 .h1{
-  font-size: 15px;
-  margin-left: 300px;
+  font-size: 25px;
+  margin-left:190px;
+  margin-right: 100px;
   margin-top: 70px;
   font-weight: bold;
   color: #FFFFFF;
@@ -100,7 +102,7 @@ color:rgb(72, 163, 224);
   
 }
 h1{
-    font-size: 15px;
+    font-size: 16px;
     margin-left: 360px;
     margin-top: 30px;
     font-weight: bold;
@@ -114,6 +116,13 @@ h1{
     font-family: sans-serif;
   
 }
+
+/* .cardjeux{
+  background: none;
+  border-style: none;
+  font-family: sans-serif;
+  gap:20px;
+} */
 
 .container{
     margin-top: 0px; 
@@ -362,7 +371,7 @@ width: 90px!important;
 
 
 }
-#contact{
+#contact {
   margin-left: 150px !important;
   margin-right: 150px !important;
 
@@ -371,17 +380,31 @@ width: 90px!important;
  /* padding-right: 150px !important; */
  padding-left: 0 !important;
     padding-right: 0 !important;
-
-   
-  
-   
-   
-
 }
+
+
+/* .game-grid{
+  margin-left: 150px !important;
+  margin-right: 150px !important;
+
+ position: relative !important;
+ overflow: over;
+
+ padding-left: 0 !important;
+    padding-right: 0 !important;
+    
+
+} */
 #contact1{
   margin-left: 100px !important;
   margin-right: 100px !important;
 
+}
+
+.h1{
+
+  margin-left: 150px !important;
+  margin-right: 150px !important;
 }
 
 
@@ -510,6 +533,7 @@ html, body {
 
 .det{
   margin-left: 200px;
+  margin-right: 200px;
 }
 
 .det1{
@@ -560,11 +584,13 @@ html, body {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Deux colonnes de taille égale */
   grid-template-rows: auto auto; /* Deux rangées automatiques */
-  gap: 20px; /* Espacement entre les éléments */
+  gap: 21px; /* Espacement entre les éléments */
   margin-left: 60px;
   margin-top: 40px;
   
 }
+
+
 
 .first-col {
 
@@ -581,6 +607,7 @@ html, body {
 .third-col {
   grid-column: 1 / span 2; /* S'étend sur deux colonnes */
   grid-row: 2; /* Deuxième rangée */
+  margin-top: 21px;
 }
 
 
@@ -601,10 +628,10 @@ html, body {
 
 #uni21{
   position: absolute;
-    margin-top:200px;
+    margin-top:230px;
      background-color: black;
      color: #FFFFFF !important; 
-     width: 950px;
+     width: 951px;
      height: auto;
      left: 0px;
      text-align: center;
@@ -616,8 +643,13 @@ html, body {
 
 
 #bonplan {
- width:980px ; 
+ width:1118px ; 
  height : 250px;
+}
+
+#aper{
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 
@@ -687,6 +719,3 @@ html, body {
   color: #FFFFFF;
 }
 
-#video:hover{
- color: #111111;
-}

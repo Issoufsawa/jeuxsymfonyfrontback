@@ -204,7 +204,7 @@
 
             <div class="col-12 col-md-4">
              {% for jeu2 in jeux2 %}
-              <a href="{{ path('app_detaille', { 'id': jeu2.id }) }}">  
+              <a href="{{ path('app_detaille', { 'id': jeu2.id })}}">  
               <div class="card mb-3" style="max-width: 550px; " id="card" >
                 <div class="row g-0" >
                   <div class="col-4">
@@ -223,9 +223,7 @@
               </div>
                 {% else %}
         <p>Aucun jeu trouvé.</p>
-    {% endfor %}
-              
-              
+    {% endfor %}  
             </div>
           </div>
         </div>
