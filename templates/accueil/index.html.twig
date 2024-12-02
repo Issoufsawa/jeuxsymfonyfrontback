@@ -97,7 +97,7 @@
     <div class="container">
         <div id="con" class="row gy-4 ">
     
-           <div class="col-12 col-md-4" id="card" >
+           <div class="col-10 col-md-4" id="card" >
              {% for jeu4 in jeux4 %}
              <a href="{{ path('app_detaille', { 'id': jeu4.id }) }}">  
                 <div  id = "ten" class="card" >
@@ -142,7 +142,7 @@
                           </div>
                         
       
-            <div class="col-12 col-md-4"  id="ver1">
+            <div class="col-10 col-md-4"  id="ver1">
             {% for jeu5 in jeux5 %}
             <a href="{{ path('app_detaille', { 'id': jeu5.id }) }}">  
               <div class="card mb-3" style="max-width: 550px; height: 100px;"  id="ver" >
@@ -166,7 +166,7 @@
                 {% endfor %}
                 </div>
             
-           <div class="col-12 col-md-4">
+           <div class="col-10 col-md-4">
           <div class="card">
             <span class="fil-actualité">Fil d'actualité</span>
             <div id="fil-actualité" class="card-body"  >
@@ -187,7 +187,7 @@
           <div class="row gy-4 align-items-center">
 
           {% for vi in video %}
-            <div class="col-12 col-md-4" id="card">
+            <div class="col-10 col-md-4" id="card">
                {% if vi.videoPath %}
                 <video   style="width:100% ;height: 300px;" controls>
                     <source src="{{ asset('uploads/videos/' ~ vi.videoPath) }}" type="video/mp4">
@@ -202,10 +202,10 @@
             <p>Aucune vidéo trouvée.</p>
             {% endfor %}
 
-            <div class="col-12 col-md-4">
+            <div class="col-10 col-md-4" >
              {% for jeu2 in jeux2 %}
-              <a href="{{ path('app_detaille', { 'id': jeu2.id })}}">  
-              <div class="card mb-3" style="max-width: 550px; " id="card" >
+              <a href="{{ path('app_detaille', { 'id': jeu2.id })}}" id="card">  
+              <div class="card mb-3" style="max-width: 550px;">
                 <div class="row g-0" >
                   <div class="col-4">
                     <img src="{{ asset('uploads/images/' ~ jeu2.imagePath) }}"class="card-img-top" alt="{{ jeu2.titre }}" style="width: 100%; height: 100px; object-fit: cover;">

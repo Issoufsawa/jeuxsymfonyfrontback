@@ -11,7 +11,7 @@ body {
   background-color: #f1f1f1;
   padding: 8px 10px;
 } */
-  #card {
+  #card2 {
     background:none;
   }
 
@@ -338,10 +338,7 @@ font-size: 10px;
     
 
   }
-/* .section .container-fluid{
-  width: 576px !important;
-
-} */
+ 
    
   .col{
     margin-left:  95px !important;
@@ -351,7 +348,7 @@ font-size: 10px;
 
  #col3{
   margin-left:  250px !important;
-  margin-bottom: 250px !important;
+  margin-bottom: 100px !important;
    
  }
 
@@ -359,19 +356,23 @@ font-size: 10px;
    
   display: flex !important;
   flex-direction: column !important;
-  width: 100px!important;
-  height: 360px!important;
+  width: 90px!important;
+  height: 359px!important;
   margin-bottom: 15px  !important;
+
 
 }
 
 #ver1{
-  margin-left: 0px !important;
+  margin-right: 0px !important;
   display: flex !important;
   flex-direction: row !important;
-  gap : 2px !important;
+  gap : 1px !important;
   width: 500px !important;
+
 }
+
+
 
 
 #img{
@@ -380,21 +381,26 @@ width: 90px!important;
 
 }
 #contact {
-  margin-left: 150px !important;
-  margin-right: 150px !important;
+  margin-left: 5px !important;
+  margin-right: 140px !important;
 
  position: relative !important;
  overflow: over;
  /* padding-right: 150px !important; */
  padding-left: 0 !important;
-    padding-right: 0 !important;
+ padding-right: 0 !important;
+ padding-bottom: 20px !important;
 }
 
+#rendez{
+  margin-top: 10px !important ;
+ 
 
+}
 
 #contact1{
   margin-left: 100px !important;
-  margin-right: 100px !important;
+  margin-right: 90px !important;
 
 }
 
@@ -719,8 +725,8 @@ html, body {
   .game-grid {
     grid-template-columns: 1fr; /* Une seule colonne */
     grid-template-rows: auto; /* Rangées automatiques */
-    margin-left: 20px;
-    margin-right: 20px ;
+    /* margin-left: 0px !important; */
+    margin-right: 20px !important ;
 
   }
 
@@ -740,6 +746,7 @@ html, body {
     grid-row: 3!important; 
     margin-top: 21px; /* Garde l'espacement vertical */
   }
+  
 }
 
 /* Adaptation pour les petits écrans (mobiles, moins de 768px) */
@@ -747,10 +754,11 @@ html, body {
   .game-grid {
     grid-template-columns: 1fr; /* Une seule colonne */
     grid-template-rows: auto auto auto; /* Rangées automatiques */
-    gap: 15px; /* Réduit l'espacement */
-    margin-left: 10px;
+    gap: 25px; /* Réduit l'espacement */
+    margin-left: 0;
     margin-right: 10px;
-    margin-top: 20px;
+    margin-top: 50px;
+ 
   
   }
 
@@ -758,7 +766,7 @@ html, body {
   .second-col,
   .third-col {
     grid-column: 1!important;  /* Colonne unique */
-    margin-right: 0; /* Supprime les marges latérales */
+    margin-right: 10px !important; /* Supprime les marges latérales */
   
    
   }
@@ -766,6 +774,7 @@ html, body {
   .third-col {
     grid-row: 3!important;  /* Place explicitement .third-col dans la troisième rangée */
   }
+  
 }
 
 
@@ -799,6 +808,7 @@ html, body {
   /* Optionnel : Marges et paddings des cartes sur les petits écrans */
   .game-grid .card {
     margin-bottom: 15px; /* Ajoute un espacement entre les cartes */
+  
   }
 
   #uni2{
@@ -829,6 +839,12 @@ html, body {
        
        
   }
+
+  h1{
+    margin-left: 60px;
+  }
+
+ 
 }
 
 

@@ -76,7 +76,7 @@
     
         <div class="col  {{ loop.index == 1 ? 'first-col' : (loop.index == 2 ? 'second-col' : 'third-col') }}">
             <a href="{{ path('app_detaille',{'id': jeu.id })}}">
-                <div class="card" style="width: 100%;" id="card">
+                <div class="card" style="width: 100%;" id="card2">
                    <img src="{{ asset('uploads/images/' ~ jeu.imagePath) }}" 
      class="card-img-top {{ loop.index == 1 ? 'img-first' : (loop.index == 2 ? 'img-second' : 'img-third') }}" 
      alt="{{ jeu.titre }}">

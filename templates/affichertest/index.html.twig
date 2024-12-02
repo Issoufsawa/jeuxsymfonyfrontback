@@ -75,11 +75,10 @@
     {% for test in alltest %}
         <div class="col {{ loop.index == 1 ? 'first-col' : (loop.index == 2 ? 'second-col' : 'third-col') }}">
             <a href="{{ path('app_detailletest', { 'id': test.id }) }}">
-                <div class="card" style="width: 100%;" id="card">
+                <div class="card" style="width: 100%;" id="card2">
                     <img src="{{ asset('uploads/images/' ~ test.imagePath) }}" 
-                         class="card-img-top" 
-                         alt="{{ test.titre }}" 
-                         style="{{ loop.index == 1 ? 'width: 450px; height: 250px; ' :(loop.index == 2 ? 'width: 450px; height: 250px;': 'width: 950px; height: 286px;')}}">
+     class="card-img-top {{ loop.index == 1 ? 'img-first' : (loop.index == 2 ? 'img-second' : 'img-third') }}" 
+     alt="{{ test.titre }}">
                     <div class="card-img-overlay">
                         <button href="#" class="btn1">NEW JEU</button>
                         <p id="{{loop.index == 1 ? 'uni2' : (loop.index == 2 ? 'uni2' : 'uni21') }}" class="card-text">{{ test.description|slice(0, 100) }} du: {{ test.createAd|date('d/m/Y H:i') }}</p>
