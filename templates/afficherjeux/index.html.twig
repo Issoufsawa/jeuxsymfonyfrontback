@@ -70,20 +70,18 @@
 <div >
 <h1 class="h1">ARTICLES</h1>
 <hr> 
-<div class="row row-cols-1 row-cols-md-4 g-4">
-   <div class="game-grid">
+<div class="row row-cols-1 row-cols-md-4 g-4" >
+   <div class="game-grid" >
     {% for jeu in jeux %}
-    
-        <div class="col  {{ loop.index == 1 ? 'first-col' : (loop.index == 2 ? 'second-col' : 'third-col') }}">
+    <div class="col  {{ loop.index == 1 ? 'first-col' : (loop.index == 2 ? 'second-col' : 'third-col') }}">
             <a href="{{ path('app_detaille',{'id': jeu.id })}}">
                 <div class="card" style="width: 100%;" id="card2">
                    <img src="{{ asset('uploads/images/' ~ jeu.imagePath) }}" 
      class="card-img-top {{ loop.index == 1 ? 'img-first' : (loop.index == 2 ? 'img-second' : 'img-third') }}" 
      alt="{{ jeu.titre }}">
-
-                    <div class="card-img-overlay">
+                   <div class="card-img-overlay">
                         <button href="#" class="btn1">NEW JEU</button>
-                        <p id="{{loop.index == 1 ? 'uni2' : (loop.index == 2 ? 'uni2' : 'uni21') }}" class="card-text">{{ jeu.description|slice(0, 100) }} du: {{ jeu.createAd|date('d/m/Y H:i') }}</p>
+                        <p id="{{loop.index == 1 ? 'uni2' : (loop.index == 2 ? 'uni2' : 'uni21') }}" class="card-text">{{ jeu.description|slice(0, 100) }} ... du: {{ jeu.createAd|date('d/m/Y H:i') }}</p>
                     </div>
                 </div>
             </a>
