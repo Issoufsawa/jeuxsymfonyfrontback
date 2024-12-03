@@ -440,54 +440,19 @@ width: 90px!important;
     
   }
 
+#col3{
+  margin-bottom: 90px !important;
+}
 
 
-   
-  /* .header-left {
-    display: none !important;
-  }
-
-  .header-right {
-    display: none !important;
-  }
-    
-  */
+ 
   body{
-    /* width: 576px !important; */
+
     overflow-x: hidden !important;
     
 
   }
  
-/*   
-  .col{
-    display: flex !important;
-    margin-left:  95px !important;
-    margin-bottom: 40px !important;
-    width: 200px !important;
-
-
-} */
-
-
-
- /* #col3{
-  margin-left:  250px !important;
-  margin-bottom: 100px !important;
-   
- } */
-
-/* #ver{
-   
-  display: flex !important;
-  flex-direction: column !important;
-  width: 400px!important;
-  height: 400px!important;
-  margin-bottom: 15px  !important;
-
-
-} */
-
 
 
 
@@ -520,7 +485,7 @@ width: 90px!important;
 #contact1{
   margin-left: 100px !important;
   margin-right: 90px !important;
-
+  
 }
 
 .h1{
@@ -534,6 +499,24 @@ width: 90px!important;
   margin-left: 100px !important;
   margin-right: 100px !important;
 }
+
+
+
+
+.header-left {
+  display: none !important;
+}
+
+.header-right{
+  display: none !important;
+}
+
+.h1{
+  font-size: 50px !important;
+  margin-bottom: 10px !important;
+}
+
+
 
 
 }
@@ -551,9 +534,10 @@ h2{
 }
 
 #col1{
-  margin-left: 54px;
+  margin-left: 50px;
   margin-top: 60px;
   margin-bottom: 40px;
+ 
 }
 
 #rendez{
@@ -864,7 +848,7 @@ html, body {
     margin-top: 21px;
   }
   
-  
+ 
   #uni2{
     position: absolute;
       margin-top:200px;
@@ -894,6 +878,8 @@ html, body {
        
        
   }
+
+  
   
 }
 

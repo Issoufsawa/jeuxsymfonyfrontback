@@ -71,7 +71,7 @@
 <h1 class="h1">Vidéos </h1>
 <hr> 
 <div class="container">
-<div class="row row-cols-1 row-cols-md-4 g-4">
+<div class="row row-cols-1 row-cols-md-2 g-4">
 
     {% for vi in video %}
             <div class="col-10 col-md-4" id="col1 {{ loop.index == 1 ? 'first-col' : (loop.index == 2 ? 'second-col' : 'third-col') }}">
@@ -92,14 +92,10 @@
     {% if page > 1 %}
         <a href="{{ path('app_afficherbonplan', {'page': page - 1}) }}"><button type="button1" class="btn9 btn-outline-primary"><i class="bi bi-arrow-left"></i></button></a>
     {% endif %}
-    
-    
     <span>   <button type="button1" class="btn9 btn-outline-primary">{{ page }}</button> ... <button type="button1" class="btn9 btn-outline-primary"> {{ totalPages }}</button></span>
     {% if page < totalPages %}
-    
-        <a href="{{ path('app_afficherbonplan', {'page': page + 1}) }}"> <button type="button1" class="btn9 btn-outline-primary"><i class="bi bi-arrow-right"></i></button></a>
-        
-    {% endif %}
+       <a href="{{ path('app_afficherbonplan', {'page': page + 1}) }}"> <button type="button1" class="btn9 btn-outline-primary"><i class="bi bi-arrow-right"></i></button></a>
+     {% endif %}
 </div>
   
 </div>
