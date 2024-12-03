@@ -434,7 +434,7 @@ width: 90px!important;
     padding-left: 0 !important;
     padding-right: 0 !important;
     /* position: absolute !important; */
-    /* overflow: visible!important;  */
+    overflow: visible!important; 
     
    
     
@@ -442,21 +442,38 @@ width: 90px!important;
 
 #col3{
   margin-bottom: 90px !important;
+  margin-left: 600px !important;
 }
 
+#uni1{
+  font-size: 10px !important;
+  font-weight: bold;
+}
 
  
   body{
-
     overflow-x: hidden !important;
-    
-
   }
  
 
+.container1{
+  margin-bottom: 230px !important;
+  margin-left: 230px !important;
+  margin-top: 150px !important;
+}
 
+#uni2{
+  font-size: 20px !important;
+}
+#uni21{
+  font-size: 20px !important;
+}
 
-
+.third-col {
+  grid-column: 1 / span 2; /* S'étend sur deux colonnes */
+  grid-row: 2; /* Deuxième rangée */
+  margin-top: 80px !important;
+}
 #img1{
   display: flex;
    width: 260px !important;
@@ -464,11 +481,9 @@ width: 90px!important;
    margin-left: 112px !important;
 }
 
-
 #contact {
-  margin-left: 5px !important;
-  margin-right: 140px !important;
-
+ margin-left: 5px !important;
+ margin-right: 140px !important;
  position: relative !important;
  overflow: over;
  padding-left: 0 !important;
@@ -477,14 +492,15 @@ width: 90px!important;
 }
 
 #rendez{
-  margin-top: 10px !important ;
- 
-
+  /* margin-top: 10px !important ; */
+  margin-bottom: 50px !important;
+  margin-right: 80px !important;
 }
 
 #contact1{
-  margin-left: 100px !important;
+  margin-left: 110px !important;
   margin-right: 90px !important;
+  margin-bottom: 300px !important ;
   
 }
 
@@ -500,9 +516,6 @@ width: 90px!important;
   margin-right: 100px !important;
 }
 
-
-
-
 .header-left {
   display: none !important;
 }
@@ -517,7 +530,35 @@ width: 90px!important;
 }
 
 
+.col1{
+padding-left: 10px !important;
+}
 
+
+
+header .navbar-nav .nav-link {
+  font-size:16px !important; 
+  
+}
+#col4{
+margin-right: 80px !important;
+}
+
+#uni{
+  font-size: 14px !important;
+}
+
+#img1{
+  width: 800px !important;
+}
+#titreap{
+  margin-left: 100px !important;
+}
+
+
+.det{
+  margin-left: 55px !important;
+}
 
 }
 
@@ -565,11 +606,6 @@ h2{
   font-size: 14px; /* Ajustez la taille pour les petits écrans */
 
 }
-
-
-
-
-
 
 
 
@@ -674,10 +710,6 @@ html, body {
   }
    
 
-/* .bi{
-  color: #010101;
-  font-weight: lighter;
-} */
 
 
 .game-grid {
@@ -825,7 +857,7 @@ html, body {
     gap: 21px; /* Espacement entre les éléments */
     margin-left: 10px;
     margin-top: 40px;
-    margin-bottom: 200px ;
+    margin-bottom: 220px ;
     
   }
   
@@ -846,6 +878,7 @@ html, body {
     grid-column: 1 / span 2; /* S'étend sur deux colonnes */
     grid-row: 2; /* Deuxième rangée */
     margin-top: 21px;
+    
   }
   
  
@@ -879,48 +912,18 @@ html, body {
        
   }
 
+
+
   
   
-}
-
-
-
-
-/* Style par défaut pour les grands écrans */
-.card-img-top {
-  width: 100%;
-  height: auto;
-  object-fit: cover; /* Garantit que l'image garde ses proportions */
-}
-
-
-@media (max-width: 768px) {
-  .game-grid {
-    grid-template-columns: 1fr; /* Une seule colonne */
-    grid-template-rows: auto auto auto; /* Rangées automatiques */
-    gap: 25px; /* Réduit l'espacement */
-    margin-left: 0 !important;
-    margin-right: 10px;
-    margin-top: 50px;
-    
- 
-  
-  }
-
-  .first-col,
-  .second-col,
-  .third-col {
-    grid-column: 1!important;  /* Colonne unique */
-    margin-right: 10px !important; /* Supprime les marges latérales */
-  
-   
-  }
-
-  .third-col {
-    grid-row: 3!important;  /* Place explicitement .third-col dans la troisième rangée */
-  }
   
 }
+
+
+
+
+
+
 
 
 

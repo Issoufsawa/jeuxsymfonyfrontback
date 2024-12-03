@@ -68,12 +68,9 @@
 </header>
 
 <main  class="body">
-   
 <div class="container d-flex justify-content-center align-items-center mt-5" style="min-height: 80vh;"  id ="contact">
-         
 <div class="row justify-content-center w-100">
-                        
-    <div class="col-md-12 col-lg-6" id="contact1">
+        <div class="col-md-12 col-lg-6" id="contact1">
                 <h1 class="col-12 col-md-6" id="rendez">Rendez-vous</h1>
         <form method="post" class="p-4 border rounded shadow">
             <div class="mb-3">
@@ -107,7 +104,6 @@
                 <button type="submit" class="btn btn-primary">Envoyer</button>
             </div>
         </form>
-
         {% for message in app.flashes('success') %}
             <div class="alert alert-success mt-3">{{ message }}</div>
         {% endfor %}
@@ -116,13 +112,8 @@
         {% endfor %}
     </div>
 </div>
-
-
 </div>
-
 </main>
-
-
 <footer >
     <div class="container-fluid  py-4 ">
         <div class="row">
@@ -136,5 +127,4 @@
     </div>
 </footer>
 </body>
-
 </html>   

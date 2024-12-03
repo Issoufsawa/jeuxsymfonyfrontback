@@ -70,7 +70,7 @@
 <div >
 <h1 class="h1">TESTS </h1>
 <hr> 
-  <div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="row row-cols-1 row-cols-md-2 g-4">
 <div class="game-grid">
     {% for test in alltest %}
         <div class="col {{ loop.index == 1 ? 'first-col' : (loop.index == 2 ? 'second-col' : 'third-col') }}">
@@ -81,7 +81,7 @@
      alt="{{ test.titre }}">
                     <div class="card-img-overlay">
                         <button href="#" class="btn1">NEW JEU</button>
-                        <p id="{{loop.index == 1 ? 'uni2' : (loop.index == 2 ? 'uni2' : 'uni21') }}" class="card-text">{{ test.description|slice(0, 100) }} du: {{ test.createAd|date('d/m/Y H:i') }}</p>
+                        <p id="{{loop.index == 1 ? 'uni2' : (loop.index == 2 ? 'uni2' : 'uni21') }}" class="card-text">{{ test.description|slice(0, 100) }} du: {{ test.createAd|date('d/m/Y H:i')}}</p>
                     </div>
                 </div>
             </a>
