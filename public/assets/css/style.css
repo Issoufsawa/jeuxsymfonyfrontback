@@ -99,8 +99,8 @@ color:rgb(72, 163, 224);
 }
 
 .h1{
-  font-size: 25px;
-  margin-left:190px;
+  font-size: 30px;
+  margin-left:20px;
   margin-right: 100px;
   margin-top: 70px;
   font-weight: bold;
@@ -110,8 +110,8 @@ color:rgb(72, 163, 224);
   
 }
 h1{
-    font-size: 16px;
-    margin-left: 360px;
+    font-size: 30px;
+    margin-left: 300px;
     margin-top: 30px;
     font-weight: bold;
     color: #FFFFFF;
@@ -239,6 +239,7 @@ font-size: 10px;
 
 #Tendance{
   margin-bottom: 40px;
+  font-size: 30px;
 }
 
 .fil-actualité{
@@ -310,17 +311,22 @@ font-size: 10px;
 
 
 
+
 @media (max-width: 576px) {
   main.body   {
     margin-left: 0 !important;
     margin-right: 0 !important;
     padding-left: 0 !important;
-    padding-right: 0 !important;
+    /* padding-right: 0 !important; */
     /* position: absolute !important; */
     /* overflow: visible!important;  */
     
   }
 
+  .header-left{
+    overflow: hidden;
+   }
+    
 
 
   
@@ -421,7 +427,116 @@ width: 90px!important;
 }
 
 
+@media  (min-width: 768px) and (max-width: 1024px) {
+  main.body   {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    /* position: absolute !important; */
+    /* overflow: visible!important;  */
+    
+   
+    
+  }
 
+
+
+   
+  /* .header-left {
+    display: none !important;
+  }
+
+  .header-right {
+    display: none !important;
+  }
+    
+  */
+  body{
+    /* width: 576px !important; */
+    overflow-x: hidden !important;
+    
+
+  }
+ 
+/*   
+  .col{
+    display: flex !important;
+    margin-left:  95px !important;
+    margin-bottom: 40px !important;
+    width: 200px !important;
+
+
+} */
+
+
+
+ /* #col3{
+  margin-left:  250px !important;
+  margin-bottom: 100px !important;
+   
+ } */
+
+/* #ver{
+   
+  display: flex !important;
+  flex-direction: column !important;
+  width: 400px!important;
+  height: 400px!important;
+  margin-bottom: 15px  !important;
+
+
+} */
+
+
+
+
+
+#img1{
+  display: flex;
+   width: 260px !important;
+   height: 260px !important;
+   margin-left: 112px !important;
+}
+
+
+#contact {
+  margin-left: 5px !important;
+  margin-right: 140px !important;
+
+ position: relative !important;
+ overflow: over;
+ padding-left: 0 !important;
+ padding-right: 0 !important;
+ padding-bottom: 20px !important;
+}
+
+#rendez{
+  margin-top: 10px !important ;
+ 
+
+}
+
+#contact1{
+  margin-left: 100px !important;
+  margin-right: 90px !important;
+
+}
+
+.h1{
+
+  margin-left: 150px !important;
+  margin-right: 150px !important;
+}
+
+
+.det{
+  margin-left: 100px !important;
+  margin-right: 100px !important;
+}
+
+
+}
 
 .contact{
  display: flex;
@@ -718,36 +833,81 @@ html, body {
 
 
 /* Adaptation pour les tablettes (écrans entre 768px et 992px) */
-@media (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .game-grid {
-    grid-template-columns: 1fr; /* Une seule colonne */
-    grid-template-rows: auto; /* Rangées automatiques */
-    /* margin-left: 0px !important; */
-    margin-right: 20px !important ;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes de taille égale */
+    grid-template-rows: auto auto; /* Deux rangées automatiques */
+    gap: 21px; /* Espacement entre les éléments */
+    margin-left: 10px;
+    margin-top: 40px;
+    margin-bottom: 200px ;
     
   }
-
+  
+  
+  
   .first-col {
-    grid-column: 1; /* Colonne unique */
-    grid-row: 1;
-    margin-right: 0; /* Supprime l'espacement horizontal */
-    
+    grid-column: 1; /* Place le premier élément dans la première colonne */
+    grid-row: 1; /* Première rangée */
+    margin-right: 10px;
   }
-
+  
   .second-col {
-    grid-column: 1; /* Colonne unique */
-    grid-row: 2;
+    grid-column: 2; /* Place le deuxième élément dans la deuxième colonne */
+    grid-row: 1; /* Première rangée */
   }
-
+  
   .third-col {
-    grid-column: 1!important;  /* Colonne unique */
-    grid-row: 3!important; 
-    margin-top: 21px; /* Garde l'espacement vertical */
+    grid-column: 1 / span 2; /* S'étend sur deux colonnes */
+    grid-row: 2; /* Deuxième rangée */
+    margin-top: 21px;
+  }
+  
+  
+  #uni2{
+    position: absolute;
+      margin-top:200px;
+       background-color: black;
+       color: #FFFFFF !important; 
+       width: 450px;
+       height: auto;
+       left: 0px;
+       text-align: center;
+       border-radius: 3px;
+       font-family: sans-serif;
+       
+       
+  }
+  
+  #uni21{
+    position: absolute;
+      margin-top:230px;
+       background-color: black;
+       color: #FFFFFF !important; 
+       width: 951px;
+       height: auto;
+       left: 0px;
+       text-align: center;
+       border-radius: 3px;
+       font-family: sans-serif;
+       
+       
   }
   
 }
 
-/* Adaptation pour les petits écrans (mobiles, moins de 768px) */
+
+
+
+/* Style par défaut pour les grands écrans */
+.card-img-top {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Garantit que l'image garde ses proportions */
+}
+
+
 @media (max-width: 768px) {
   .game-grid {
     grid-template-columns: 1fr; /* Une seule colonne */
@@ -786,6 +946,66 @@ html, body {
 }
 
 /* Responsivité : petits écrans */
+@media (max-width: 576px) {
+  .card-img-top {
+    width: 100%; /* L'image prend toute la largeur du conteneur */
+    height: auto; /* Ajuste la hauteur en conséquence */
+    object-fit: cover; /* Conserve les proportions de l'image */
+  }
+
+  .first-col .card-img-top,
+  .second-col .card-img-top,
+  .third-col .card-img-top {
+    width: 350px; /* Même style pour toutes les colonnes */
+    height: auto; /* Ajuste la hauteur selon le contenu */
+    
+    
+    
+  }
+
+  /* Optionnel : Marges et paddings des cartes sur les petits écrans */
+  .game-grid .card {
+    margin-bottom: 15px; /* Ajoute un espacement entre les cartes */
+  
+  }
+
+  #uni2{
+
+    position: absolute;
+    margin-top:150px;
+     background-color: black;
+     color: #FFFFFF !important; 
+     width: 350px;
+     height: auto;
+     left: 0px;
+     text-align: center;
+     border-radius: 3px;
+     font-family: sans-serif;
+  }
+
+  #uni21{
+    position: absolute;
+      margin-top:150px;
+       background-color: black;
+       color: #FFFFFF !important; 
+       width: 350px;
+       height: auto;
+       left: 0px;
+       text-align: center;
+       border-radius: 3px;
+       font-family: sans-serif;
+       
+       
+  }
+
+  h1{
+    margin-left: 60px;
+  }
+
+ 
+}
+
+
 @media (max-width: 576px) {
   .card-img-top {
     width: 100%; /* L'image prend toute la largeur du conteneur */
