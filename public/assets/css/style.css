@@ -987,9 +987,9 @@ html, body {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: auto auto auto; 
     gap: 21px; /* Espacement entre les éléments */
-    margin-left: 10px;
+    margin-left: 1px;
     margin-top: 40px;
-    margin-bottom: 220px ;
+    margin-bottom: 20px ;
     margin-right: 100px !important;
     
   }
@@ -1037,8 +1037,15 @@ html, body {
    footer .text-center {
     text-align: center; /* Centrer le texte horizontalement */
     margin-right: 70px !important;     /* Centrer si besoin */
-   
-  }
+     }
+
+     #bon{
+      font-size: 17px !important;
+     }
+
+     #aper{
+      font-size: 20px !important;
+     }
 }
 
 
