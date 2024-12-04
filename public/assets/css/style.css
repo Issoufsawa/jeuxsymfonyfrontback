@@ -312,6 +312,8 @@ font-size: 10px;
 
 
 
+
+
 @media (max-width: 576px) {
   main.body   {
     margin-left: 0 !important;
@@ -440,6 +442,10 @@ width: 90px!important;
     
   }
 
+  footer .text-center {
+    text-align: center; /* Centrer le texte horizontalement */
+    margin: 0 auto;     /* Centrer si besoin */
+  }
 #col3{
   margin-bottom: 90px !important;
   margin-left: 600px !important;
@@ -457,8 +463,8 @@ width: 90px!important;
  
 
 .container1{
-  margin-bottom: 230px !important;
-  margin-left: 230px !important;
+  margin-bottom: 400px !important;
+  margin-left: 1px !important;
   margin-top: 150px !important;
 }
 
@@ -602,10 +608,6 @@ h2{
 
 
 
-#footer p, #footer small {
-  font-size: 14px; /* Ajustez la taille pour les petits écrans */
-
-}
 
 
 
@@ -912,49 +914,31 @@ html, body {
        
   }
 
-
-
-  
-  
   
 }
 
 
 
 
-
-
-
-
-
-/* Style par défaut pour les grands écrans */
-.card-img-top {
-  width: 100%;
-  height: auto;
-  object-fit: cover; /* Garantit que l'image garde ses proportions */
-}
-
-/* Responsivité : petits écrans */
 @media (max-width: 576px) {
   .card-img-top {
-    width: 100%; /* L'image prend toute la largeur du conteneur */
-    height: auto; /* Ajuste la hauteur en conséquence */
-    object-fit: cover; /* Conserve les proportions de l'image */
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
   }
 
   .first-col .card-img-top,
   .second-col .card-img-top,
   .third-col .card-img-top {
-    width: 350px; /* Même style pour toutes les colonnes */
-    height: auto; /* Ajuste la hauteur selon le contenu */
-    
+    width: 350px; 
+    height: auto;
     
     
   }
 
-  /* Optionnel : Marges et paddings des cartes sur les petits écrans */
+  
   .game-grid .card {
-    margin-bottom: 15px; /* Ajoute un espacement entre les cartes */
+    margin-bottom: 15px; 
   
   }
 
@@ -990,68 +974,71 @@ html, body {
   h1{
     margin-left: 60px;
   }
-
- 
-}
-
-
-@media (max-width: 576px) {
-  .card-img-top {
-    width: 100%; /* L'image prend toute la largeur du conteneur */
-    height: auto; /* Ajuste la hauteur en conséquence */
-    object-fit: cover; /* Conserve les proportions de l'image */
-  }
-
-  .first-col .card-img-top,
-  .second-col .card-img-top,
-  .third-col .card-img-top {
-    width: 350px; /* Même style pour toutes les colonnes */
-    height: auto; /* Ajuste la hauteur selon le contenu */
-    
-    
-    
-  }
-
-  /* Optionnel : Marges et paddings des cartes sur les petits écrans */
-  .game-grid .card {
-    margin-bottom: 15px; /* Ajoute un espacement entre les cartes */
+  .container1{
+    margin-bottom: 200px !important;
+    margin-top: 150px !important;
   
   }
 
-  #uni2{
 
-    position: absolute;
-    margin-top:150px;
-     background-color: black;
-     color: #FFFFFF !important; 
-     width: 350px;
-     height: auto;
-     left: 0px;
-     text-align: center;
-     border-radius: 3px;
-     font-family: sans-serif;
+
+  .game-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto auto auto; 
+    gap: 21px; /* Espacement entre les éléments */
+    margin-left: 10px;
+    margin-top: 40px;
+    margin-bottom: 220px ;
+    margin-right: 100px !important;
+    
+  }
+  
+  
+  
+  .first-col {
+    grid-column: 1; /* Place le premier élément dans la première colonne */
+    grid-row: 1; /* Première rangée */
+    margin-right: 10px;
+  }
+  
+  .second-col {
+    grid-column: 1; /* Place le deuxième élément dans la deuxième colonne */
+    grid-row: 2; /* Première rangée */
+  }
+  
+  .third-col {
+    grid-column: 1 ; 
+    grid-row: 3; /* troisième rangée */
+    margin-top: 21px;
+    
   }
 
-  #uni21{
-    position: absolute;
-      margin-top:150px;
-       background-color: black;
-       color: #FFFFFF !important; 
-       width: 350px;
-       height: auto;
-       left: 0px;
-       text-align: center;
-       border-radius: 3px;
-       font-family: sans-serif;
-       
-       
+  #con{
+    margin-right: 10px;
   }
 
-  h1{
-    margin-left: 60px;
+  #card{
+    margin-right: 20px;
   }
 
- 
+   #deo{
+   width: 450px !important;
+   height: 250px !important;
+   margin-right: 20px !important;
+   }
+  
+   #xbox{
+    margin-right:20px !important ;
+    font-size: 21px !important;
+   }
+
+
+   footer .text-center {
+    text-align: center; /* Centrer le texte horizontalement */
+    margin-right: 70px !important;     /* Centrer si besoin */
+   
+  }
 }
 
 

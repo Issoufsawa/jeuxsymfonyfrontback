@@ -71,18 +71,18 @@
 <h1 class="h1">Vidéos </h1>
 <hr> 
 <div class="container1">
-<div class="row row-cols-1 row-cols-md-2 g-4">
+<div class="row row-cols-1 row-cols-md-4 g-2" >
     {% for vi in video %}
-            <div class="col-10 col-md-8" id="col1 {{ loop.index == 1 ? 'first-col' : (loop.index == 2 ? 'second-col' : 'third-col') }}">
+            <div class="col-10 col-md-4" id="card">
                {% if vi.videoPath %}
-                <video   style="width:100% ;height: 300px;" controls id="card">
+                <video   style="width:100% ;height: 300px;" controls  id="card">
                     <source src="{{ asset('uploads/videos/' ~ vi.videoPath) }}" type="video/mp4" >
                     Votre navigateur ne prend pas en charge la balise vidéo.
                 </video>
             {% else %}
                 <p>Aucune vidéo disponible.</p>
             {% endif %}
-            <p id="uni1" class="card-text">{{ vi.description|slice(0, 100) }} du:{{vi.createAd|date('d/m/Y H:i') }}</p>
+            <p id="uni1" class="card-text">{{ vi.description|slice(0, 100) }}... du:{{vi.createAd|date('d/m/Y H:i') }}</p>
             </div>
             {% else %}
             <p>Aucune vidéo trouvée.</p>
