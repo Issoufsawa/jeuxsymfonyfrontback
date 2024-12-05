@@ -63,3 +63,61 @@
     }
   
   }
+
+  
+
+  @media (min-width: 760px) and (max-width: 1024px) {
+
+    main.body  {
+     
+      display: flex;
+    }
+   
+    .banniere {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      /* margin-bottom: 500px; */
+    }
+    
+    .banniere img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
+      
+      /* margin-bottom: 500px; */
+    }
+    
+    .banniere .overlay1 {
+      position: relative;
+      width: 359px; 
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    
+    }
+    .h1{
+      text-align: start;
+      /* margin-left: auto; */
+      font-size: 10px;
+    }
+
+    .det1{
+      text-align:start;
+      font-size: 15px;
+    }
+    .det{
+      text-align: start;
+      font-size: 15px;
+      
+    }
+    
+    .la{
+      text-align: start;
+      font-size: 15px;
+    }
+
+   
+  }

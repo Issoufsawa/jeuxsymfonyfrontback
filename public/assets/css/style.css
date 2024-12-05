@@ -6,10 +6,9 @@ body {
   background-color: rgb(208, 205, 205);
 }
 
-/* .header {
-  overflow: hidden;
-  background-color: #f1f1f1;
-  padding: 8px 10px;
+/* footer {
+  overflow-x: hidden !important;
+ 
 } */
   #card2 {
     background:none;
@@ -312,6 +311,11 @@ font-size: 10px;
 
 
 
+@media (min-width: 375px)  and (max-width: 667px) {
+ 
+ 
+  
+}
 
 
 @media (max-width: 576px) {
@@ -612,6 +616,7 @@ h2{
 
 
 html, body {
+  width: 100%;
   height: 100%; /* La page prend toute la hauteur */
   margin: 0;
   display: flex;
@@ -643,7 +648,7 @@ html, body {
 
 
 #col3{
-  margin-left: 850px;
+  margin-left: 85px;
   margin-bottom: 100px ;
   margin-top: 50px;
    
@@ -721,6 +726,7 @@ html, body {
   gap: 21px; /* Espacement entre les éléments */
   margin-left: 60px;
   margin-top: 40px;
+  width: 100%;
   
 }
 
@@ -860,6 +866,7 @@ html, body {
     margin-left: 10px;
     margin-top: 40px;
     margin-bottom: 220px ;
+  
     
   }
   

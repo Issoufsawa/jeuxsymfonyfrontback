@@ -74,7 +74,7 @@
 
     {% for jeu in jeux %}
      
-        <div class="col" id="col1">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" id="col1">
             <a href="{{ path('app_detaille', { 'id': jeu.id }) }}">  
             <div class="card" style="width: 300px" id="card">
                 <img   src="{{ asset('uploads/images/' ~ jeu.imagePath) }}"class="card-img-top" alt="{{ jeu.titre }}" style="width:100%">
@@ -85,6 +85,7 @@
                 </div>
                </a>
         </div>
+        
     {% else %}
         <p>Aucun jeu trouvé.</p>
     {% endfor %}
@@ -97,7 +98,7 @@
     <div class="container">
         <div id="con" class="row gy-4  ">
     
-           <div class="col-10 col-md-4" id="card" >
+           <div class="col-10 col-md-4 " id="card" >
              {% for jeu4 in jeux4 %}
              <a href="{{ path('app_detaille', { 'id': jeu4.id }) }}">  
                 <div  id = "ten" class="card" >
