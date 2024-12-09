@@ -60,7 +60,7 @@ public function findLastFive(): array
 {
     return $this->createQueryBuilder('a')
         ->orderBy('a.id', 'DESC')
-        ->setMaxResults(5)
+        ->setMaxResults(4)
         ->getQuery()
         ->getResult();
 }

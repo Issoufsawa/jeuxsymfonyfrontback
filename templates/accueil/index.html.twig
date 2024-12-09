@@ -9,40 +9,41 @@
 <link rel="stylesheet" href={{ asset("assets/img/jeux.jpg") }}>
 </head>
 <body>
-<header class="section fixed-top bg-light" >
-    <div class="container-fluid " style="background-color: #2e4255;">
-        <div class="row align-items-center py-3">
-        <nav class="navbar navbar-expand-md navbar-light  p-0">
-                    
-            <div class="collapse navbar-collapse" id="navbarMenu1">
-            <div class="col-12 col-md-6 d-flex flex-wrap header-left">
-                <a class="me-3"><i class="bi bi-envelope-fill custom-icon"></i> contact@exemple.com</a>
-                <a class="me-3"><i class="bi bi-telephone-fill custom-icon"></i> +1 5589 55488 55</a>
-                <a  class="me-3"><i class="bi bi-geo-alt-fill custom-icon"></i> A108 Adam Street, NY</a>
-            </div>
-            <div class="col-12 col-md-6 text-md-end header-right d-flex justify-content-md-end justify-content-center flex-wrap mt-2 mt-md-0">
-                <a class="me-3"><i class="bi bi-twitter custom-icon"></i></a>
-                <a class="me-3"><i class="bi bi-facebook custom-icon"></i></a>
-                <a class="me-3"><i class="bi bi-instagram custom-icon"></i></a>
-                <a class="me-3"><i class="bi bi-skype custom-icon"></i></a>
-                <a class="me-3"><i class="bi bi-linkedin custom-icon"></i></a>
-            </div>
-        </div>
-        </div>
-        </nav>
-        <div class="row align-items-center py-3">
-            <div class="col-12 col-md-6" >
-                <a href="{{ path('app_afficheractualite')}}" class="logo h4 text-decoration-none"  style=" margin-left: 150px  ; color :  #FFFFFF" ><span class="bg-primary bg-gradient p-1 rounded-3 text-light">Jeux-</span>video.ci</a>
-            </div>
-            <div class="col-12 col-md-6 text-md-end"  >
-                <nav class="navbar navbar-expand-md navbar-light p-0">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
-                        aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarMenu" style = " margin-right: 100px ;color :  #FFFFFF"  >
-                        <ul class="navbar-nav ms-auto" >
-                            <li class="nav-item dropdown">
+    <div class="container my-4 ">
+        <header class="section fixed-top bg-light" >
+            <div class="container-fluid " style="background-color: #2e4255;">
+                <div class="row align-items-center py-2">
+                <nav class="navbar navbar-expand-md navbar-light  p-0">
+                            
+                    <div class="collapse navbar-collapse" id="navbarMenu1">
+                    <div class="col-12 col-md-6 d-flex flex-wrap header-left">
+                        <a class="me-3"><i class="bi bi-envelope-fill custom-icon"></i> contact@exemple.com</a>
+                        <a class="me-3"><i class="bi bi-telephone-fill custom-icon"></i> +1 5589 55488 55</a>
+                        <a  class="me-3"><i class="bi bi-geo-alt-fill custom-icon"></i> A108 Adam Street, NY</a>
+                    </div>
+                    <div class="col-12 col-md-6 text-md-end header-right d-flex justify-content-md-end justify-content-center flex-wrap mt-2 mt-md-0">
+                        <a class="me-3"><i class="bi bi-twitter custom-icon"></i></a>
+                        <a class="me-3"><i class="bi bi-facebook custom-icon"></i></a>
+                        <a class="me-3"><i class="bi bi-instagram custom-icon"></i></a>
+                        <a class="me-3"><i class="bi bi-skype custom-icon"></i></a>
+                        <a class="me-3"><i class="bi bi-linkedin custom-icon"></i></a>
+                    </div>
+                </div>
+                </div>
+                </nav>
+                <div class="row align-items-center py-2">
+                    <div class="col-12 col-md-6" >
+                        <a href="{{ path('app_afficheractualite')}}" class="logo h4 text-decoration-none"  style=" margin-left: 150px  ; color :  #FFFFFF" ><span class="bg-primary bg-gradient p-1 rounded-3 text-light">Jeux-</span>video.ci</a>
+                    </div>
+                    <div class="col-12 col-md-6 text-md-end">
+                        <nav class="navbar navbar-expand-md navbar-light p-0">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                                aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarMenu" style = " margin-right: 100px ;color :  #FFFFFF"  >
+                                <ul class="navbar-nav ms-auto" >
+                                   <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="actusDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"  style = " color :  #FFFFFF">
                                     Actus
                                 </a>
@@ -51,148 +52,136 @@
                                     <li><a class="dropdown-item" href="{{ path('app_afficheactualiteimage') }}"  id="lien1">Articles</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="{{ path('app_afficherjeux') }}"  id="lien">Jeux</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ path('app_affichertest') }}"  id="lien">Tests</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ path('app_apercu') }}"  id="lien">Apercus</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ path('app_affichervideo') }}"  id="lien">Multimédia</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ path('app_afficherbonplan') }}" id="lien">Bons plans</a></li>
-                            <li class="nav-item">
-                                <a href="{{ path('app_appointement') }}" class="btn btn-primary"  style = " color :  #FFFFFF">Prendre un rendez-vous</a>
-                            </li>
-                        </ul>
+                                    <li class="nav-item"><a class="nav-link" href="{{ path('app_afficherjeux') }}"  id="lien">Jeux</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ path('app_affichertest') }}"  id="lien">Tests</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ path('app_apercu') }}"  id="lien">Apercus</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ path('app_affichervideo') }}"  id="lien">Multimédia</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ path('app_afficherbonplan') }}" id="lien">Bons plans</a></li>
+                                    <li class="nav-item">
+                                        <a href="{{ path('app_appointement') }}" class="btn btn-primary"  style = " color :  #FFFFFF">Prendre un rendez-vous</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
                     </div>
-                </nav>
+                </div>
             </div>
-        </div>
-    </div>
-</header>
-<main  class="body" >
-<div >
-<h1 class="h1">Suivre jeuxvideo.com/Toute l'actu de la Xbox Series X et S et ses jeux </h1>
-<hr> 
-<div class="row row-cols-1 row-cols-md-4 g-5 align-items-center">
-
-    {% for jeu in jeux %}
-     
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" id="col1">
-            <a href="{{ path('app_detaille', { 'id': jeu.id }) }}">  
-            <div class="card" style="width: 300px" id="card">
-                <img   src="{{ asset('uploads/images/' ~ jeu.imagePath) }}"class="card-img-top" alt="{{ jeu.titre }}" style="width:100%">
-                <div class="card-img-overlay">
-                    <button href="#" class="btn1">NEW JEU</button>
-                    <p id="uni" class="card-text">{{ jeu.description|slice(0, 100)}} ... du :{{jeu.createAd|date('d/m/Y H:i') }}</p>
-                </div>
-                </div>
-               </a>
-        </div>
+        </header>
+     <div class="py-2 py-md-3 py-lg-4">
+        <!-- Section Xbox Series -->
+        <section  py-2>
+            <h2 class="jeu">Suivre jeuxvideo.com/Toute l'actu de la Xbox Series X et S et ses jeux</h2>
+            
+            <div class="row py-5">
+ {% for jeu in jeux %}
+                <div class="col-md-4 col-sm-6 py-2">
+             
+                    <div class="game-card" id="card">
+                     
+                        <span class="badge">NEW JEU</span>
+                          
+                        <img src="{{ asset('uploads/images/' ~ jeu.imagePath) }}" alt="Anno 1800">
+                        <p id="uni">{{ jeu.description|slice(0, 80) }}...
+                   <span class="date">{{jeu.createAd|date('d/m/Y H:i') }}</span></p>
+       
+                    </div>
         
-    {% else %}
+                </div>
+              {% else %}
         <p>Aucun jeu trouvé.</p>
     {% endfor %}
+            </div>
+         
+        </section>
 
- </div>    
-  <hr>
-  <h1 id="Tendance">Tendance</h1>
-  <section  class="my-3" >
-       
-    <div class="container">
-        <div id="con" class="row gy-4  ">
-    
-           <div class="col-10 col-md-4 " id="card" >
-             {% for jeu4 in jeux4 %}
-             <a href="{{ path('app_detaille', { 'id': jeu4.id }) }}">  
-                <div  id = "ten" class="card" >
-                    <img src="{{ asset('uploads/images/' ~ jeu4.imagePath) }}"class="card-img-top" alt="{{ jeu4.titre }}" style="width:100% ;height: 225px;"  >
-                            <div class="card-img-overlay">
-                              <button href="#" class="btn1">NEW JEU</button>              
-                            </div>
-                              <div class="card-body">
+        <!-- Section Tendance -->
+        <section>
+            <h2 class="mt-1 mb-1">Tendance</h2>
+            <div class="container">
+            <div class="row">
+             
+                <div class="col-md-4">
+                {% for jeu4 in jeux4 %}
+                    <div class="game-card" id="card">
+                        <span class="badge">News Jeu</span>
+                        <img src="{{ asset('uploads/images/' ~ jeu4.imagePath) }}" alt="Hades">
+                        <div class="card-body">
                                 <p class="card-title">{{ jeu4.titre }} : (PS5,Xbox Series,Switch,PS4,Xbox <br> One,PC)</p>
                                 <p class="act1">{{ jeu4.createAd|date('d/m/Y') }}</p>
                                 <p class="card-text">{{ jeu4.description|slice(0, 100) }} ...</p>
-                                <button href="#" class="btn2">PC</button>
-                                <button href="#" class="btn3">XBOX SERIES</button>
-                                <button href="#" class="btn4">SWITCH</button>
-                                <button href="#" class="btn5">PSS</button>
+                                
                              </div>
-                            
-                    {% else %}
-                          <p>Aucun jeu trouvé.</p>
-                      {% endfor %}
-              </a>
-          </div>
-         <div class="card mb-3" style="max-width: 550px; margin-top: 7px;" >
-         {% for jeu4 in jeux4 %}
-         <a href="{{ path('app_detaille', { 'id': jeu4.id }) }}">  
-          <div class="row g-0" >
-                <div class="col-4" id="card" >
-                  <img src="{{ asset('uploads/images/' ~ jeu4.imagePath) }}" class="card-img-top" alt="{{ jeu4.titre }}" style="width: 100%; height: 100px; object-fit: cover;">
+                    </div>
+                
+                    <div class="card mb-3" style="max-width: 450px; " id="card">
+                        <div class="row g-0">
+                          <div class="col-4">
+                          
+                            <img src="{{ asset('uploads/images/' ~ jeu4.imagePath) }}" class="img-fluid rounded-start" alt="..." style="width: 100%; height: 100%; object-fit: cover;">
+                          </div>
+                          <div class="col-8">
+                            <div class="card-body">
+                              <p class="card-text"> <span class="badge">News Jeu</span>
+                              <span class="new">News Jeu :</span>{{ jeu4.titre }}  :{{ jeu4.description|slice(0, 40) }}...
+                   <span class="date">{{jeu4.createAd|date('d/m/Y H:i') }}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                 </div>
-                      <div class="col-md-8" style="width: 130px;">
-                        <div class="card-body">
-                          <p   class="text">
-                            <span class="new">News Jeu :</span> {{ jeu4.titre }} : {{ jeu4.description|slice(0, 100) }} ...
-                            <span class="date d-block">{{jeu4.createAd|date('d/m/Y H:i') }}</span>
-                          </p>
-                            </div>
-                            </div>
+                      
+               {% else %}
+        <p>Aucun jeu trouvé.</p>
+    {% endfor %}
+                 
+                
+                
+                <div class="col-md-4">
+                 {% for jeu5 in jeux5 %}
+                    <div class="card mb-3" style="max-width: 450px; " id="card">
+                        <div class="row g-0">
+                          <div class="col-4">
+                            <img src="{{ asset('uploads/images/' ~ jeu5.imagePath) }}" class="img-fluid rounded-start" alt="..." style="width: 100%; height: 100%; object-fit: cover;">
                           </div>
-                            </div>
-                       </a>
-                          {% else %}
-                          <p>Aucun jeu trouvé.</p>
-                      {% endfor %}
-
-                          </div>
-                        
-      
-            <div class="col-10 col-md-4"  id="ver1">
-            {% for jeu5 in jeux5 %}
-            <a href="{{ path('app_detaille', { 'id': jeu5.id }) }}">  
-              <div class="card mb-3" style="max-width: 550px; height: 100px;"  id="ver" >
-            <div class="row g-0" >
-              <div class="col-md-4">
-                <img src="{{ asset('uploads/images/' ~ jeu5.imagePath) }}"class="card-img-top" alt="{{ jeu5.titre }}" style="width: 100px; height: 100px;" id="img">
-              </div>
-              <div class="col-md-8" style="width: 130px;">
-                <div class="card-body" >
-                  <p  class="text">
-                   <span class="new">News Jeu :</span> {{ jeu5.titre }}  :{{ jeu5.description|slice(0, 100) }}...
+                          <div class="col-8">
+                            <div class="card-body">
+                              <p class="card-text"><span class="badge">News Jeu</span>
+                              
+                               <span class="new">News Jeu :</span> {{ jeu5.titre }} :{{ jeu5.description|slice(0, 40) }}...
                    <span class="date">{{jeu5.createAd|date('d/m/Y H:i') }}</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-              </a>
-          </div>
-          {% else %}
-            <p>Aucun jeu trouvé.</p>
-                {% endfor %}
-                </div>
-            
-           <div class="col-10 col-md-4">
-          <div class="card">
-            <span class="fil-actualité">Fil d'actualité</span>
-            <div id="fil-actualité" class="card-body"  >
-            {% for actualiteimage1 in actualiteimage %}
-          <p class="act"  id="card"> <span class="new"> NEWS </span> - du {{ actualiteimage1.createAd|date('d/m/Y') }} {{ actualiteimage1.titre }} : {{ actualiteimage1.description|slice(0, 100) }}...</p>
-        {% endfor %}            
-            </div>
-          </div>
-        </div>
-    </div>
-  </section>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                       {% else %}
+        <p>Aucun jeu trouvé.</p>
+          {% endfor %}
+                     
+                      
+                   </div>
+                   <div class="col-md-4">
+                    <div class="card">
+                    <span class="fil">Fil d'actualité</span>
+                      {% for actualiteimage1 in actualiteimage %}
+                    <p class="act" id="card"> <span class="new">NEW :</span> {{ actualiteimage1.createAd|date('d/m/Y') }} {{ actualiteimage1.titre }} : {{ actualiteimage1.description|slice(0, 70) }}...</p>
+                    {% endfor%}
+                       </div>
+                   </div>
 
-  <hr>
-      <h1 id="xbox"> Promos et bons plans Xbox Series</h1>
-      <section  class="my-2">
-        <div class="container" id="pro">
-        
-          <div class="row gy-4 align-items-center">
-
-          {% for vi in video %}
-            <div class="col-10 col-md-4" id="card">
-               {% if vi.videoPath %}
+            </div>
+           </div>
+        </section>
+          <!-- Section Tendance -->
+          <section>
+            <h2 class="mt-5 mb-3">Promos et bons plans Xbox Series</h2>
+            <div class="container">
+            <div class="row">
+            {% for vi in video %}
+                <div class="col-md-4">
+                
+                 <div class="col-12 col-md-12" id="card">
+                {% if vi.videoPath %}
                 <video   style="width:100% ;height: 300px;" controls id="deo">
                     <source src="{{ asset('uploads/videos/' ~ vi.videoPath) }}" type="video/mp4">
                     Votre navigateur ne prend pas en charge la balise vidéo.
@@ -202,62 +191,50 @@
             {% endif %}
             <p id="uni1" class="card-text">{{ vi.description|slice(0, 100) }} ... du:{{vi.createAd|date('d/m/Y') }} </p>
             </div>
-            {% else %}
+            
+                </div>
+                {% else %}
             <p>Aucune vidéo trouvée.</p>
             {% endfor %}
-
-            <div class="col-10 col-md-4"  >
-             {% for jeu2 in jeux2 %}
-              <a href="{{ path('app_detaille', { 'id': jeu2.id })}}" >  
-              <div class="card mb-3" style="max-width: 500px;" id="card">
-                <div class="row g-0" >
-                  <div class="col-4">
-                    <img src="{{ asset('uploads/images/' ~ jeu2.imagePath) }}"class="card-img-top" alt="{{ jeu2.titre }}" style="width: 100%; height: 76px; object-fit: cover;">
-                  </div>
-                  <div class="col-md-8" style="width: 130px;">
-                    <div class="card-body">
-                      <p class="text">
-                       <span class="new">News Jeu :</span>  {{ jeu2.titre }}  :{{ jeu2.description|slice(0, 100) }} ...
-                       <span class="date">{{jeu2.createAd|date('d/m/Y H:i') }}</span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                  </a>
-              </div>
-                {% else %}
+                
+                
+                   <div class="col-md-4">
+                      {% for jeu2 in jeux2 %}
+                    <div class="card mb-3" style="max-width: 450px; " id="card">
+                        <div class="row g-0">
+                          <div class="col-4" >
+                            <img src="{{ asset('uploads/images/' ~ jeu2.imagePath) }}" class="img-fluid rounded-start" alt="..." style="width: 100%; height: 100%; object-fit: cover;" >
+                          </div>
+                          <div class="col-8">
+                            <div class="card-body">
+                              <p class="card-text"> <span class="badge">News Jeu</span> {{ jeu2.titre }}  :{{ jeu2.description|slice(0, 40) }}...
+                   <span class="date">{{jeu2.createAd|date('d/m/Y H:i') }}</span> </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                       {% else %}
         <p>Aucun jeu trouvé.</p>
-    {% endfor %}  
+          {% endfor %}
+                   </div>
+
             </div>
-          </div>
-        </div>
-      </section>
+           </div>
+        </section>
     </div>
-</main>
+  </div>
 
-
+    <!-- Lien vers Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+<footer class="text-light py-4" style="background-color: #2e4255;">
+    <div class="container">
 
-<footer>
-    <div class="container-fluid py-4">
-        <div class="row justify-content-center text-md-start">
-            <div class="col-12 col-md-6 text-center">
-                <p class="mb-0 fs-6">
-                   Copyright &copy; 2024 Jeux-video.ci. Tous droits réservés.
-                </p>
-                <small class="d-block">Développé par GROUPE CIMEF.</small>
-            </div>
+        <div class="text-center mt-4">
+            <p class="mb-0"> Copyright&copy; 2024 Jeux-vidéo.ci. Tous droits réservés.</p>
+            <small class="d-block">Développé par GROUPE CIMEF.</small>
         </div>
     </div>
 </footer>
 
 </html>
-
-
-
-
-
-
-
-
-
