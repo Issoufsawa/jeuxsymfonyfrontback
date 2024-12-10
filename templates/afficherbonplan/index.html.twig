@@ -79,16 +79,16 @@
                     <div class="game-card" id="card">
                      
                         <span class="badge">NEW JEU</span>
-                          
+                           <a href="{{ path('app_detaillebonplan', { 'id': bonplan.id }) }}">
                         <img src="{{ asset('uploads/images/' ~ bonplan.imagePath) }}" alt="Anno 1800">
                        <p id="uni">{{ bonplan.description|slice(0, 70) }}...
                    <span class="date">{{bonplan.createAd|date('d/m/Y H:i') }}</span></p>
-       
+         </a>
        
                     </div>
         
                 </div>
-                                                {% else %}
+                   {% else %}
         <p>Aucun jeu trouvé.</p>
     {% endfor %}
             </div>

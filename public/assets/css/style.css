@@ -337,6 +337,9 @@ margin: 20px ;
   margin-top: 90px;
 }
 
+.jeu1{
+  margin-top: 50px;
+}
 
 
 
@@ -421,4 +424,28 @@ margin: 20px ;
 
 #uni{
   padding-left: 20px;
+  color: #FFFFFF;
+ 
 }
+
+
+.custom-img {
+  max-height: 300px;
+ object-fit: cover; 
+      }
+        
+ 
+ #aper{
+ 
+ font-size: 20px;
+ 
+ }
+ 
+
+
+ .game-link {
+  text-decoration: none; 
+  color: inherit; 
+}
+
+
