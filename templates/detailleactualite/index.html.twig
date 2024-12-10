@@ -89,16 +89,16 @@
         </section>
 
         <hr>
-     <section  py-2>
-            <h2 class="jeu">Lastest NEWS</h2>
+     <section  py-1>
+            <h2 class="jeu1">Lastest NEWS</h2>
             
             <div class="row py-5">
           {% for jeu in jeux %}
                 <div class="col-md-4 col-sm-6 py-2">
                  <div class="game-card" id="card">
                      <span class="badge">NEW JEU</span>
-                      <a href="{{ path('app_detailleactualite', { 'id': jeu.id }) }}">  
-                        <img src="{{ asset('uploads/images/' ~ jeu.imagePath) }}" alt="Anno 1800">
+                      <a href="{{ path('app_detailleactualite', { 'id': jeu.id }) }}" class="game-link">  
+                        <img src="{{ asset('uploads/images/' ~ jeu.imagePath) }}" >
                         <p id="uni">{{ jeu.description|slice(0, 80) }}...
                    <span class="date">{{jeu.createAd|date('d/m/Y H:i') }}</span></p>
           </a>

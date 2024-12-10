@@ -32,7 +32,7 @@
                 </div>
                 </nav>
                 <div class="row align-items-center py-2">
-                    <div class="col-12 col-md-6" >
+                    <div class="col-12 col-md-4 " >
                         <a href="{{ path('app_afficheractualite')}}" class="logo h4 text-decoration-none"  style=" margin-left: 150px  ; color :  #FFFFFF" ><span class="bg-primary bg-gradient p-1 rounded-3 text-light">Jeux-</span>video.ci</a>
                     </div>
                     <div class="col-12 col-md-6 text-md-end">
@@ -104,12 +104,13 @@
                 {% for jeu4 in jeux4 %}
                     <div class="game-card" id="card">
                         <span class="badge">News Jeu</span>
+                         <a href="{{ path('app_detaille', { 'id': jeu4.id }) }}" class="game-link">  
                         <img src="{{ asset('uploads/images/' ~ jeu4.imagePath) }}" alt="Hades">
                         <div class="card-body">
                                 <p class="card-title">{{ jeu4.titre }} : (PS5,Xbox Series,Switch,PS4,Xbox <br> One,PC)</p>
                                 <p class="act1">{{ jeu4.createAd|date('d/m/Y') }}</p>
                                 <p class="card-text">{{ jeu4.description|slice(0, 100) }} ...</p>
-                                
+                                </a>
                              </div>
                     </div>
                 
@@ -122,8 +123,10 @@
                           <div class="col-8">
                             <div class="card-body">
                               <p class="card-text"> <span class="badge">News Jeu</span>
+                               <a href="{{ path('app_detaille', { 'id': jeu4.id }) }}" class="game-link">  
                               <span class="new">News Jeu :</span>{{ jeu4.titre }}  :{{ jeu4.description|slice(0, 40) }}...
                    <span class="date">{{jeu4.createAd|date('d/m/Y H:i') }}</span>
+                   </a>
                             </div>
                           </div>
                         </div>
@@ -146,9 +149,10 @@
                           <div class="col-8">
                             <div class="card-body">
                               <p class="card-text"><span class="badge">News Jeu</span>
-                              
+                              <a href="{{ path('app_detaille', { 'id': jeu5.id }) }}"  class="game-link"> 
                                <span class="new">News Jeu :</span> {{ jeu5.titre }} :{{ jeu5.description|slice(0, 40) }}...
                    <span class="date">{{jeu5.createAd|date('d/m/Y H:i') }}</span>
+                   </a>
                               </p>
                             </div>
                           </div>
@@ -197,18 +201,21 @@
             <p>Aucune vidéo trouvée.</p>
             {% endfor %}
                 
-                
-                   <div class="col-md-4">
-                      {% for jeu2 in jeux2 %}
+                 <div class="col-md-4">
+                 {% for jeu2 in jeux2 %}
                     <div class="card mb-3" style="max-width: 450px; " id="card">
                         <div class="row g-0">
-                          <div class="col-4" >
-                            <img src="{{ asset('uploads/images/' ~ jeu2.imagePath) }}" class="img-fluid rounded-start" alt="..." style="width: 100%; height: 100%; object-fit: cover;" >
+                          <div class="col-4">
+                            <img src="{{ asset('uploads/images/' ~ jeu2.imagePath) }}" class="img-fluid rounded-start" alt="..." style="width: 100%; height: 100%; object-fit: cover;">
                           </div>
                           <div class="col-8">
                             <div class="card-body">
-                              <p class="card-text"> <span class="badge">News Jeu</span> {{ jeu2.titre }}  :{{ jeu2.description|slice(0, 40) }}...
-                   <span class="date">{{jeu2.createAd|date('d/m/Y H:i') }}</span> </p>
+                              <p class="card-text"><span class="badge">News Jeu</span>
+                              <a href="{{ path('app_detaille', { 'id': jeu2.id }) }}"  class="game-link"> 
+                               <span class="new">News Jeu :</span> {{ jeu2.titre }} :{{ jeu2.description|slice(0, 40) }}...
+                   <span class="date">{{jeu2.createAd|date('d/m/Y H:i') }}</span>
+                   </a>
+                              </p>
                             </div>
                           </div>
                         </div>

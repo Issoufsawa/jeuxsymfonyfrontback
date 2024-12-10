@@ -97,8 +97,8 @@
                 <div class="col-md-4 col-sm-6 py-2">
                  <div class="game-card" id="card">
                      <span class="badge">NEW JEU</span>
-                       <a href="{{ path('app_detailleactualite', { 'id': jeu.id }) }}">  
-                        <img src="{{ asset('uploads/images/' ~ jeu.imagePath) }}" alt="Anno 1800">
+                       <a href="{{ path('app_detailleactualite', { 'id': jeu.id }) }}" class="game-link">  
+                        <img src="{{ asset('uploads/images/' ~ jeu.imagePath) }}" >
                         <p id="uni">{{ jeu.description|slice(0, 80) }}...
                    <span class="date">{{jeu.createAd|date('d/m/Y H:i') }}</span></p>
           </a>
