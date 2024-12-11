@@ -12,7 +12,7 @@ use Doctrine\ORM\EntityManagerInterface;
 
 class TestController extends AbstractController
 {
-    #[Route('/test', name: 'app_test')]
+    #[Route('/Test', name: 'app_test')]
     public function index(Request $request, EntityManagerInterface $entityManager): Response
     {
         {
