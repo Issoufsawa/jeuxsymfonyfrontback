@@ -92,7 +92,7 @@
         <p>Aucun jeu trouvé.</p>
     {% endfor %}
             </div>
-    <div class="col" id="col3">
+       <div class="col" id="col3">
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-right">
             <!-- Bouton Précédent -->
@@ -110,13 +110,32 @@
                 </li>
             {% endif %}
 
-            <!-- Numéro de page actuel -->
-            <li class="page-item active">
-                <span class="page-link">{{ page }}</span>
-            </li>
+            <!-- Première page -->
+            {% if page > 2 %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ path('app_affichertest', {'page': 1}) }}">1</a>
+                </li>
+                {% if page > 3 %}
+                    <li class="page-item disabled"><span class="page-link">...</span></li>
+                {% endif %}
+            {% endif %}
+
+            <!-- Pages autour de la page actuelle -->
+            {% for p in range(max(1, page - 1), min(totalPages, page + 1)) %}
+                <li class="page-item {% if p == page %}active{% endif %}">
+                    {% if p == page %}
+                        <span class="page-link">{{ p }}</span>
+                    {% else %}
+                        <a class="page-link" href="{{ path('app_affichertest', {'page': p}) }}">{{ p }}</a>
+                    {% endif %}
+                </li>
+            {% endfor %}
 
             <!-- Dernière page -->
-            {% if page < totalPages %}
+            {% if page < totalPages - 1 %}
+                {% if page < totalPages - 2 %}
+                    <li class="page-item disabled"><span class="page-link">...</span></li>
+                {% endif %}
                 <li class="page-item">
                     <a class="page-link" href="{{ path('app_affichertest', {'page': totalPages}) }}">{{ totalPages }}</a>
                 </li>

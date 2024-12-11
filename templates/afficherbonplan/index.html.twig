@@ -81,7 +81,7 @@
                         <span class="badge">NEW JEU</span>
                            <a href="{{ path('app_detaillebonplan', { 'id': bonplan.id }) }}" class="game-link">
                         <img src="{{ asset('uploads/images/' ~ bonplan.imagePath) }}" >
-                       <p id="uni">{{ bonplan.description|slice(0, 70) }}...
+                       <p id="uni">{{ bonplan.description|slice(0, 80) }}...
                    <span class="date">{{bonplan.createAd|date('d/m/Y H:i') }}</span></p>
          </a>
        
@@ -92,8 +92,8 @@
         <p>Aucun jeu trouvé.</p>
     {% endfor %}
             </div>
-    <div class="col" id="col3">
-    <nav aria-label="Page navigation">
+      <div class="col" id="col3">
+         <nav aria-label="Page navigation">
         <ul class="pagination justify-content-right">
             <!-- Bouton Précédent -->
             {% if page > 1 %}
@@ -110,13 +110,32 @@
                 </li>
             {% endif %}
 
-            <!-- Numéro de page actuel -->
-            <li class="page-item active">
-                <span class="page-link">{{ page }}</span>
-            </li>
+            <!-- Première page -->
+            {% if page > 2 %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ path('app_afficherbonplan', {'page': 1}) }}">1</a>
+                </li>
+                {% if page > 3 %}
+                    <li class="page-item disabled"><span class="page-link">...</span></li>
+                {% endif %}
+            {% endif %}
+
+            <!-- Pages autour de la page actuelle -->
+            {% for p in range(max(1, page - 1), min(totalPages, page + 1)) %}
+                <li class="page-item {% if p == page %}active{% endif %}">
+                    {% if p == page %}
+                        <span class="page-link">{{ p }}</span>
+                    {% else %}
+                        <a class="page-link" href="{{ path('app_afficherbonplan', {'page': p}) }}">{{ p }}</a>
+                    {% endif %}
+                </li>
+            {% endfor %}
 
             <!-- Dernière page -->
-            {% if page < totalPages %}
+            {% if page < totalPages - 1 %}
+                {% if page < totalPages - 2 %}
+                    <li class="page-item disabled"><span class="page-link">...</span></li>
+                {% endif %}
                 <li class="page-item">
                     <a class="page-link" href="{{ path('app_afficherbonplan', {'page': totalPages}) }}">{{ totalPages }}</a>
                 </li>
@@ -139,7 +158,6 @@
         </ul>
     </nav>
 </div>
-     
 
             </div>
          
