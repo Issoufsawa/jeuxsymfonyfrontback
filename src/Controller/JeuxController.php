@@ -12,7 +12,7 @@ use Doctrine\Persistence\ManagerRegistry; // Ajoute cette ligne pour les autres 
 
 class JeuxController extends AbstractController
 {
-    #[Route('/jeux', name: 'app_jeux')]
+    #[Route('/jeux1', name: 'app_jeux1')]
     public function addGame(Request $request, EntityManagerInterface $entityManager): Response
     {
         $actuc = new Actuc();

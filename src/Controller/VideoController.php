@@ -15,7 +15,7 @@ use Doctrine\Persistence\ManagerRegistry;
 
 class VideoController extends AbstractController
 {
-    #[Route('/video', name: 'app_video')]
+    #[Route('/video1', name: 'app_video1')]
     public function index(Request $request, EntityManagerInterface $em, SluggerInterface $slugger): Response
     {
 
