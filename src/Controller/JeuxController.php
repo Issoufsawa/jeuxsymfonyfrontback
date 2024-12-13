@@ -52,13 +52,33 @@ class JeuxController extends AbstractController
     }
 
     #[Route('/Jeuxliste', name: 'app_jeuxliste')]
-    public function jeuxliste(ManagerRegistry $mr): Response
+    public function jeuxliste(ManagerRegistry $mr, Request $request): Response
     {
-        // Récupérer toutes les entrées de l'entité Actuc
-        $alljeux = $mr->getRepository(Actuc::class)->findAll();
-        // Passer la variable alljeux à la vue
+        // Nombre d'éléments par page
+        $limit = 3;
+    
+        // Numéro de la page (par défaut 1)
+        $page = max(1, $request->query->getInt('page', 1));
+    
+        // Calculer l'offset
+        $offset = ($page - 1) * $limit;
+    
+        // Récupérer le Repository
+        $repository = $mr->getRepository(Actuc::class);
+    
+        // Récupérer le total des entrées
+        $total = $repository->count([]);
+    
+        // Récupérer les entrées paginées
+        $alljeux = $repository->findBy([], null, $limit, $offset);
+    
+        // Calculer le nombre total de pages
+        $totalPages = ceil($total / $limit);
+    
         return $this->render('jeuxliste/jeuxliste.html.twig', [
-            'alljeux' => $alljeux,  // Assurez-vous que cette variable est passée à Twig
+            'alljeux' => $alljeux,  // Résultats paginés
+            'currentPage' => $page,
+            'totalPages' => $totalPages,
         ]);
     }
 

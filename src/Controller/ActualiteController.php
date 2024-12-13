@@ -61,11 +61,35 @@ class ActualiteController extends AbstractController
 }
 
 #[Route('/listeactualiteimage ', name: 'app_listeactualiteimage')]
-public function listeactualitevideo(ManagerRegistry $mr) : Response
+public function listeactualitevideo(ManagerRegistry $mr , Request $request) : Response
 {
-  $allactualiteimage = $mr->getRepository(Actualiteimage::class)->findAll();
+    // Nombre d'éléments par page
+    $limit = 3;
 
-   return $this->render('listeactualiteimage/listeactualiteimage.html.twig',['allactualiteimage' => $allactualiteimage]);
+    // Numéro de la page (par défaut 1)
+    $page = max(1, $request->query->getInt('page', 1));
+
+    // Calculer l'offset
+    $offset = ($page - 1) * $limit;
+
+    // Récupérer le repository
+    $repository = $mr->getRepository(Actualiteimage::class);
+
+    // Récupérer le total des entrées
+    $total = $repository->count([]);
+
+    // Récupérer les entrées paginées
+    $allactualiteimage = $repository->findBy([], null, $limit, $offset);
+
+    // Calculer le nombre total de pages
+    $totalPages = ceil($total / $limit);
+
+    // Renvoyer les données à la vue
+    return $this->render('listeactualiteimage/listeactualiteimage.html.twig', [
+        'allactualiteimage' => $allactualiteimage,
+        'currentPage' => $page,
+        'totalPages' => $totalPages,
+    ]);
 }
 
 #[Route('/actualite/{id}/edit', name: 'actualite_edit', methods: ['GET', 'POST'])]

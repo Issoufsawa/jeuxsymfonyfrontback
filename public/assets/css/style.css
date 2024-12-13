@@ -456,3 +456,24 @@ margin: 20px ;
 #rendez1{
   margin-top: 20px;
 }
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination a {
+  margin: 0 5px;
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid #007bff;
+  color: #007bff;
+  border-radius: 5px;
+}
+
+.pagination a:hover {
+  background-color: #007bff;
+  color: white;
+}

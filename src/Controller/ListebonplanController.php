@@ -15,15 +15,34 @@ use Doctrine\ORM\EntityManagerInterface;
 class ListebonplanController extends AbstractController
 {
     #[Route('/listebonplan', name: 'app_listebonplan')]
-    public function index(bonplanRepository $bonplanRepository): Response
+    public function index(bonplanRepository $bonplanRepository, Request $request): Response
     {
-
-        $allbonplan = $bonplanRepository->findAll(); // Cette méthode récupère tous les jeux de la table
+        // Nombre d'éléments par page
+        $limit = 3;
+    
+        // Numéro de la page actuelle (par défaut 1)
+        $page = max(1, $request->query->getInt('page', 1));
+    
+        // Calcul de l'offset
+        $offset = ($page - 1) * $limit;
+    
+        // Récupérer le total des enregistrements
+        $total = $bonplanRepository->count([]);
+    
+        // Récupérer les enregistrements paginés
+        $allbonplan = $bonplanRepository->findBy([], null, $limit, $offset);
+    
+        // Calculer le nombre total de pages
+        $totalPages = ceil($total / $limit);
+    
+        // Renvoyer les données à la vue
         return $this->render('listebonplan/index.html.twig', [
-            'controller_name' => 'ListebonplanController',
-            'allbonplan' => $allbonplan, // Passe la liste des jeux à la vue
+            'allbonplan' => $allbonplan,
+            'currentPage' => $page,
+            'totalPages' => $totalPages,
         ]);
     }
+    
     #[Route('/bonplan/{id}/edit', name: 'bonplan_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, $id, EntityManagerInterface $entityManager): Response
     {

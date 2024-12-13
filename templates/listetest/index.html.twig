@@ -115,6 +115,37 @@
     </div>
 </div>
 {% endblock %}
+<nav aria-label="Pagination">
+    <ul class="pagination justify-content-center">
+        {% if currentPage > 1 %}
+            <li class="page-item">
+                <a class="page-link" href="{{ path(app.request.attributes.get('_route'), app.request.query.all|merge({'page': currentPage - 1})) }}" aria-label="Précédent">
+                    <span aria-hidden="true">&laquo;</span> Précédent
+                </a>
+            </li>
+        {% else %}
+            <li class="page-item disabled">
+                <span class="page-link" aria-hidden="true">&laquo; Précédent</span>
+            </li>
+        {% endif %}
+
+        <li class="page-item disabled">
+            <span class="page-link">Page {{ currentPage }} sur {{ totalPages }}</span>
+        </li>
+
+        {% if currentPage < totalPages %}
+            <li class="page-item">
+                <a class="page-link" href="{{ path(app.request.attributes.get('_route'), app.request.query.all|merge({'page': currentPage + 1})) }}" aria-label="Suivant">
+                    Suivant <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        {% else %}
+            <li class="page-item disabled">
+                <span class="page-link">Suivant &raquo;</span>
+            </li>
+        {% endif %}
+    </ul>
+</nav>
 
 {{ include('admin/includes/footer.html.twig') }}
 
